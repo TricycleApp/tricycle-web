@@ -105,3 +105,16 @@ h2{
     background-color: #F3FAE1;
     color: #9AC738;
 }
+
+
+
+
+
+
+/*flex*/
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
