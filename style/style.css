@@ -23,6 +23,8 @@ body{
     height: 100%;
     background-color: #9AC738;
     font-family: "proxima_nova";
+    margin: 0;
+    padding: 0;
 }
 
 .twitter{
@@ -107,7 +109,6 @@ h2{
     justify-content: space-around;
     align-items: center;
 
-
 }
 
 .flex-container2 {
@@ -126,9 +127,21 @@ h2{
 
 .flex-container4 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; 
+    
+    text-align: right;
+
+}
+
+.flex-container5 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color:  #F3FAE1;
-    bottom: auto;
 
+}
+
+.droits {
+    text-align: left;
 }
