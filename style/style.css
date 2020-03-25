@@ -48,21 +48,13 @@ h2{
     color: #F3FAE1;
 }
 
-.screen1{
-    margin-left: 17%;
-    margin-top: 3%;
-}
 
 .screen2{
-    margin-right: 17%;
-    margin-top: 3%;
     float: right;
 
 }
 
 .screen3{
-    margin-left: 17%;
-    margin-top:3%;
     float: left;
 }
 
@@ -70,8 +62,6 @@ h2{
 .scan{
     
     padding:2rem ;
-    margin-top: 8%;
-    margin-right: 8%;
     float: right;
     background-color:  #F3FAE1;
     border-radius: 1rem;
@@ -80,9 +70,6 @@ h2{
 .history{
     
     padding:2rem ;
-    margin-top: 8%;
-    margin-left: 8%;
-    margin-bottom: 8%;
     float: left;
     background-color:  #F3FAE1;
     border-radius: 1rem;
@@ -91,8 +78,6 @@ h2{
 .stats{
     
     padding: 2rem;
-    margin-right: 8%;
-    margin-top: 8%;
     float: right;
     background-color:  #F3FAE1;
     border-radius: 1rem;
@@ -100,21 +85,50 @@ h2{
 
 .bouton{
     padding: 1rem;
-    width: 200px;
+    width: 300px;
     border-radius: 1rem;
+    border: none;
     background-color: #F3FAE1;
     color: #9AC738;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: large;
 }
 
-
-
-
-
-
+.bouton:hover{
+    cursor: pointer;
+    background-color: rgb(228, 233, 217);
+}
 /*flex*/
 
 .flex-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.flex-container3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.flex-container4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #F3FAE1;
+    bottom: auto;
+
 }
