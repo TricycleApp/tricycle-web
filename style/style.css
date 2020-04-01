@@ -139,6 +139,12 @@ h3 {
     background-color:  #F3FAE1;
 }
 
+.flex-container6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .droits {
     text-align: left;
 }
@@ -156,4 +162,23 @@ footer {
 
 .flex-footer img{
     margin: 0 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .flex-container2{
+        flex-direction: column-reverse;
+    }
+    .flex-container6{
+        display: flex;
+        justify-content:space-between;
+    }
+    section{
+        flex-direction: column;
+        
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
 }
