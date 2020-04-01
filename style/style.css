@@ -180,5 +180,17 @@ footer {
 }
 
 @media screen and (max-width: 400px){
+    .flex-container2{
+        flex-direction: column-reverse;
+    }
+    .flex-container6{
+        display: flex;
+        justify-content:space-between;
+    }
+    section{
+        flex-direction: column;
+        
+    }
+
 
 }
