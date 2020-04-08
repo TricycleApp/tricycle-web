@@ -30,7 +30,6 @@ body{
 h1{
     color: white;
     font-size: 3rem;
-    max-width: 50vw;
 }
 
 section:first-of-type {
@@ -46,10 +45,11 @@ section:first-of-type > div {
 section {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 6rem;
 }
 
 h3 {
-    max-width: 40vw;
+    margin: 0 2rem;
 }
 
 .speech1, .speech2 {
@@ -66,6 +66,7 @@ h3 {
 .speech2{
     text-align: center;
     color: #F3FAE1;
+    padding: 0 2rem;
 }
 
 .speech1 h3, .speech2 h3 {
@@ -163,6 +164,12 @@ footer {
 .flex-footer img{
     margin: 0 2rem;
 }
+.logo {
+    display: inline-block;
+}
+.small-icon {
+    display: none;
+}
 
 @media screen and (max-width: 600px){
     .flex-container2{
@@ -175,6 +182,21 @@ footer {
     section{
         flex-direction: column;
         
+    }
+    h1{
+        font-size: 2rem;
+        padding: 0 2rem;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+    }
+    .small-icon {
+        display: inline-block;
+        width: 50vw;
+    }
+    .logo{
+        display: none;
     }
 
 }
@@ -193,4 +215,14 @@ footer {
     }
 
 
+}
+
+
+
+
+
+@media (min-width: 600px) {
+    section {
+        padding: 0 5rem;
+    }
 }
