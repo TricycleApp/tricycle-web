@@ -166,6 +166,8 @@ footer {
 }
 .logo {
     display: inline-block;
+    width:20rem;
+    margin: 2rem;
 }
 .small-icon {
     display: none;
@@ -190,6 +192,7 @@ footer {
     header {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
     }
     .small-icon {
         display: inline-block;
@@ -197,6 +200,9 @@ footer {
     }
     .logo{
         display: none;
+    }
+    .flex-footer img {
+        margin: 0;
     }
 
 }
@@ -213,7 +219,6 @@ footer {
         flex-direction: column;
         
     }
-
 
 }
 
