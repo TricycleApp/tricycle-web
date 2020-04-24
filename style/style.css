@@ -209,6 +209,13 @@ footer {
     height: 5rem;
 }
 
+.play-store:active, button:active {
+    transform: scale(0.98);
+}
+
+button:focus {
+    outline: none;
+}
 .flex-container6 div:last-of-type {
     justify-content: flex-start;
 }
@@ -295,6 +302,9 @@ footer {
     .flex-container3 {
         flex-direction: row-reverse;
     }
+    .screen2 {
+        position: relative;
+    }
 
     .flex-container6 {
         display: grid;
@@ -324,16 +334,16 @@ footer {
         position: relative;
     }
     .loupe {
-        height: 20rem;
-        width: 20rem;
+        height: 30rem;
+        width: 30rem!important;
         position: absolute;
-        right: 30%;
-        bottom: 2vw;
+        left: -15rem;
+        bottom: 0;
         display: block;
         z-index: -2;
     }
     .flex-container2::after {
-        height: 40rem;
+        height: 50rem;
         transform: skewY(-20deg);
     }
     .history {
@@ -348,7 +358,7 @@ footer {
     .flex-container3 {
         margin-top: 20rem;
     }
-    .screen2 img {
+    .screen2 img:first-of-type {
         transform: rotate(0);
         width: 27vw;
         position: relative;
