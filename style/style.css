@@ -67,7 +67,7 @@ section div h3 {
 }
 
 .speech1{
-    background-color: #F3FAE1;
+    background-color: white;
     color: #9AC738;
     padding: 3rem 0;
     align-items: center;
@@ -118,7 +118,7 @@ a{
     max-width: 70vw;
     border-radius: 1rem;
     border: none;
-    background-color: #F3FAE1;
+    background-color: white;
     color: #9AC738;
     display: block;
     margin: auto;
