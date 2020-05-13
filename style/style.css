@@ -109,6 +109,9 @@ section div h3 {
     transform: rotate(-15deg);
     width: 75%;
 }
+a{
+    text-decoration: none;
+}
 .bouton{
     padding: 1rem;
     width: 300px;
@@ -138,7 +141,7 @@ section div h3 {
 }
 .flex-container2::after {
     content: '';
-    background-color: #F3FAE1;
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -168,7 +171,7 @@ section div h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:  #F3FAE1;
+    background-color:  white;
 }
 
 .flex-container6 {
