@@ -227,6 +227,10 @@ button:focus {
     flex-direction: column;
     width: auto;
 }
+.legal a{
+    color: #000;
+    margin-right: 2rem;
+}
 
 @media screen and (max-width: 600px){
     .flex-container2{
