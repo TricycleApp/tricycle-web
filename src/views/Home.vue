@@ -3,7 +3,9 @@
     <header>
       <img class="logo" src="@/assets/logo.png">
       <ul class="menu">
-        <li><a href="/news">News</a></li>
+        <li>
+          <router-link to="/news">News</router-link>
+        </li>
       </ul>
     </header>
     <main>
@@ -77,8 +79,8 @@
     <footer class="flex-container5">
       <p>Tous droits réservé</p>
       <div class="legal">
-        <a href="/privacy" aria-label="">Politique de confidentialité</a>
-        <a href="/agreement" aria-label="">Conditions d'utilisations</a>
+        <router-link to="/privacy" >Politique de confidentialité</router-link>
+        <router-link to="/agreement" >Conditions d'utilisations</router-link>
       </div>
       <div class="flex-footer">
         <p>N'hésitez pas à nous suivre sur Twitter pour être au courant des dernières nouveautés !</p>
