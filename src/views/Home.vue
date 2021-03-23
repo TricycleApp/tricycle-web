@@ -1,12 +1,15 @@
 <template>
   <div class="vitrine">
     <header>
-      <img class="logo" src="img/logo.png">
+      <img class="logo" src="@/assets/logo.png">
+      <ul class="menu">
+        <li><a href="/news">News</a></li>
+      </ul>
     </header>
     <main>
       <section class="flex-container6">
         <div>
-          <img src="img/scan.png" class="phone">
+          <img src="@/assets/scan.png" class="phone">
         </div>
         <div>
           <h1>TriCycle</h1>
@@ -14,7 +17,7 @@
         </div>
         <div>
           <a href="https://play.google.com/store/apps/details?id=dev.tricycle&hl=fr">
-            <img src="img/play-button.png" alt="télécharger sur le playstore" class="play-store">
+            <img src="@/assets/play-button.png" alt="télécharger sur le playstore" class="play-store">
           </a>
         </div>
       </section>
@@ -30,8 +33,8 @@
       <section class="flex-container">
         <div class="screen1">
           <picture>
-            <source srcset="img/product-desktop.png" media="(min-width: 800px)">
-            <img src="img/product-mobile.png" alt="Capture du scan d'un produit">
+            <source srcset="@/assets/product-desktop.png" media="(min-width: 800px)">
+            <img src="@/assets/product-mobile.png" alt="Capture du scan d'un produit">
           </picture>
         </div>
         <div class="scan">
@@ -48,15 +51,15 @@
             scanner. Différentes catégories sont également disponibles si vous ne connaissez pas le nom exacte.</p>
         </div>
         <div class="screen2">
-          <img src="img/recherche.png" />
-          <img src="img/search.png" alt="Capture d'écran de la fonction recherche" class="loupe">
+          <img src="@/assets/recherche.png" />
+          <img src="@/assets/search.png" alt="Capture d'écran de la fonction recherche" class="loupe">
         </div>
       </section>
       <section class="flex-container3">
         <div class="screen3">
           <picture>
-            <source srcset="img/profil-desktop.png" media="(min-width: 800px)">
-            <img src="img/profil-mobile.png" alt="Capture d'écran de la page profil">
+            <source srcset="@/assets/profil-desktop.png" media="(min-width: 800px)">
+            <img src="@/assets/profil-mobile.png" alt="Capture d'écran de la page profil">
           </picture>
         </div>
         <div class="stats">
@@ -74,12 +77,12 @@
     <footer class="flex-container5">
       <p>Tous droits réservé</p>
       <div class="legal">
-        <a href="legal/privacy-policy.html" aria-label="">Politique de confidentialité</a>
-        <a href="legal/user-agreement.html" aria-label="">Conditions d'utilisations</a>
+        <a href="/privacy" aria-label="">Politique de confidentialité</a>
+        <a href="/agreement" aria-label="">Conditions d'utilisations</a>
       </div>
       <div class="flex-footer">
         <p>N'hésitez pas à nous suivre sur Twitter pour être au courant des dernières nouveautés !</p>
-        <a href="https://twitter.com/TriCycle_app"><img class="twitter" src="img\twitter.png"></a>
+        <a href="https://twitter.com/TriCycle_app"><img class="twitter" src="@/assets/twitter.png"></a>
       </div>
     </footer>
   </div>
