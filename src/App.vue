@@ -19,4 +19,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.vitrine {
+  background: var(--main-clr);
+  .flex-container2 {
+    z-index: 0;
+  }
+}
 </style>

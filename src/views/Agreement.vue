@@ -191,5 +191,26 @@ export default {
 </script>
 
 <style>
+body{
+    height: 100%;
+    background-color: #9AC738;
+    font-family: "Gordita";
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
+.twitter{
+    width: 40px;
+    height: 40px;
+}
+
+h1{
+    color: #F3FAE1;
+    font-size: 4rem;
+}
+h2 {
+    color: #F3FAE1;
+    padding: 0 2rem;
+}
 </style>
