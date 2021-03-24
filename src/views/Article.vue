@@ -28,12 +28,12 @@ export default {
       }
     },
     mounted() {
-      fetch(`https://data.app-tricycle.com/items/articles?fields=title,thumbnail,accroche,content,date_created,date_updated,tags.tags_id.name,sources.sources_id.*`, {
+      fetch(`https://data.app-tricycle.com/items/articles/${this.$route.params.id}?fields=title,thumbnail,accroche,content,date_created,date_updated,tags.tags_id.name,sources.sources_id.*`, {
          method: 'GET'
       })
       .then(res => res.json())
       .then(res => {
-        const data = res.data[0];
+        const data = res.data;
         console.log(data);
         this.title = data.title;
         this.thumbnail = data.thumbnail;
