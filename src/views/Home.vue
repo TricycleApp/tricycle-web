@@ -14,7 +14,7 @@
           <img src="@/assets/scan.png" class="phone">
         </div>
         <div>
-          <h1>TriCycle</h1>
+          <h1>TriCycle App</h1>
           <h2>L'application qui vous aide à trier !</h2>
         </div>
         <div>
