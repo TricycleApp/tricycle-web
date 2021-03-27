@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+	<div id="app">
+		<router-view />
+	</div>
 </template>
 
 <style lang="scss">
 .menu {
-  list-style-type: none;
-  margin-right: auto;
-  li a {
-    color: white;
-    font-weight: bold;
-  }
+	list-style-type: none;
+	margin-right: auto;
+	li a {
+		color: white;
+		font-weight: bold;
+	}
 }
-.vitrine header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.vitrine {
-  background: var(--main-clr);
-  .flex-container2 {
-    z-index: 0;
-  }
+header {
+	background-color: var(--main-clr);
+	padding: 0 1rem;
+	.brand {
+		padding: 2rem;
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: var(--white-font);
+	}
 }
 </style>

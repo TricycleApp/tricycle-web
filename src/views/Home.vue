@@ -470,5 +470,17 @@ export default {
             width: 35vw;
         }
     }
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+}
+.vitrine {
+  background: var(--main-clr);
+  .flex-container2 {
+    z-index: 0;
+  }
 }
 </style>

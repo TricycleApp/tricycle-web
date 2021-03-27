@@ -256,6 +256,12 @@ button:disabled {
     pointer-events: none;
     transform: none;
 }
+button a {
+    color: var(--main-font);
+}
+button a::before {
+    content: none;
+}
 .btn {
     border: 2px solid transparent;
     box-shadow: var(--shdw);
@@ -283,6 +289,9 @@ button:disabled {
 .btn-second:focus {
     border-color: var(--second-border);
 }
+.btn-second a {
+    color: var(--second-font)!important;
+}
 
 /* Delete button */
 .btn-delete {
@@ -294,6 +303,9 @@ button:disabled {
 }
 .btn-delete:focus {
     border-color: var(--delete-font);
+}
+.btn-delete a {
+    color: var(--delete-font)!important;
 }
 
 /* Liens */
