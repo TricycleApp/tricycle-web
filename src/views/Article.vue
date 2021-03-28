@@ -7,33 +7,44 @@
             <div class="article-container">
                 <h1 class="article-title">{{ title }}</h1>
                 <ul class="article-tags">
-                <li class="article-tags-item" v-for="tag in tags" :key="tag.id">{{ tag }}</li>
-            </ul>
+                    <li class="article-tags-item" v-for="tag in tags" :key="tag.id">{{ tag }}</li>
+                </ul>
                 <div class="article-infos">
                     <div class="article-date">{{ date }}</div>
                     <div class="article-author">
                     <span class="article-author-label">Écrit par</span>
-                    <span class="article-author-name">John Doe</span>
+                    <span class="article-author-name">{{ author }}</span>
                 </div>
                 </div>
                 <div class="article-thumbnail">
                     <img :src="'https://data.app-tricycle.com/assets/' + thumbnail" alt="" />
                 </div>
+                <div class="article-social">
+                    <ul class="article-social-list">
+                        <li class="article-social-label">Visitez nos réseaux 😊</li>
+                        <li class="article-social-item">
+                            <a href="https://twitter.com/TriCycle_app" title="Twitter"><img src="../assets/icons/twitter.svg" alt=""></a>
+                        </li>
+                        <li class="article-social-item"> 
+                            <a href="#" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="article-accroche" v-html="accroche"></div>
                 <div class="article-content" v-html="content"></div>
-            <div class="article-sources">
-                <p class="article-sources-label">Sources :</p>
-                <ul class="article-sources-list">
-                    <li class="article-sources-item" v-for="source in sources" :key="source.id">
-                        <a :href="source.link">{{ source.name }}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="article-all">
-                <button class="btn btn-second">
-                    <router-link to="/news" class="article-see-all">Voir tout les articles</router-link>
-                </button>
-            </div>
+                <div class="article-sources">
+                    <p class="article-sources-label">Sources :</p>
+                    <ul class="article-sources-list">
+                        <li class="article-sources-item" v-for="source in sources" :key="source.id">
+                            <a :href="source.link">{{ source.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="article-all">
+                    <button class="btn btn-second">
+                        <router-link to="/news" class="article-see-all">Voir tout les articles</router-link>
+                    </button>
+                </div>
             </div>
         </main>
         <Footer/>
@@ -51,6 +62,7 @@ export default {
 	data() {
 		return {
 			title: "",
+            author: "",
 			thumbnail: "",
 			accroche: "",
 			content: "",
@@ -60,26 +72,34 @@ export default {
 		};
 	},
 	mounted() {
-		fetch(`https://data.app-tricycle.com/items/articles/${this.$route.params.id}?fields=title,thumbnail,accroche,content,date_created,date_updated,tags.tags_id.name,sources.sources_id.*`, {
+		fetch(`https://data.app-tricycle.com/items/articles/${this.$route.params.id}?fields=title,thumbnail,accroche,content,date_created,date_updated,tags.tags_id.name,sources.sources_id.*,user_created`, {
 			method: "GET",
 		})
-			.then((res) => res.json())
-			.then((res) => {
-				const data = res.data;
-				console.log(data);
-				this.title = data.title;
-				this.thumbnail = data.thumbnail;
-				this.accroche = data.accroche;
-				this.content = data.content;
-				this.date = new Date(data.date_created).toLocaleDateString('fr-FR', {day: 'numeric', month: 'long', year: 'numeric'});
-				data.tags.forEach(element => {
-                    this.tags.push(element.tags_id.name);
-                });
-				data.sources.forEach(element => {
-                    this.sources.push({ name: element.sources_id.name, link: element.sources_id.link });
-                });
-                // console.log(this.sources);
-			});
+        .then((res) => res.json())
+        .then((res) => {
+            const data = res.data;
+            console.log(data);
+            this.title = data.title;
+            this.thumbnail = data.thumbnail;
+            this.accroche = data.accroche;
+            this.content = data.content;
+            this.date = new Date(data.date_created).toLocaleDateString('fr-FR', {day: 'numeric', month: 'long', year: 'numeric'});
+            data.tags.forEach(element => {
+                this.tags.push(element.tags_id.name);
+            });
+            data.sources.forEach(element => {
+                this.sources.push({ name: element.sources_id.name, link: element.sources_id.link });
+            });
+            fetch(`https://data.app-tricycle.com/users/${data.user_created}`, {
+                method: 'GET'
+            })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res.data);
+                this.author = res.data.first_name + ' ' + res.data.last_name;
+            })
+            // console.log(this.sources);
+        });
 	},
 };
 </script>
@@ -109,6 +129,10 @@ export default {
             margin-right: 1rem;
             margin-bottom: 1rem;
             font-weight: bold;
+            min-width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     &-infos {
@@ -167,6 +191,12 @@ export default {
         em {
             color: var(--main-clr);
         }
+        ol, ul {
+            margin-top: 1.875rem;
+        }
+        ol > li::marker {
+            font-size: 1.2rem;
+        }
         blockquote {
             background-color: var(--background-emphase);
             padding: 3rem;
@@ -178,7 +208,7 @@ export default {
             position: relative;
             &::before {
                 content: '';
-                background: url('../assets/quote.svg') no-repeat;
+                background: url('../assets/icons/quote.svg') no-repeat;
                 background-size: contain;
                 width: 3rem;
                 height: 3rem;
@@ -199,20 +229,55 @@ export default {
             font-size: 1.4rem;
             margin-bottom: 1rem;
         }
-        &-item {
-            margin: .5rem 0;
-            margin-left: 2rem;
-            font-size: 1.2rem;
-            &::marker {
-                color: var(--main-clr);
-                font-size: 1.4rem;
-            }
-        }
     }
     &-all {
         margin: 1rem 0;
         .btn {
             width: 100%;
+        }
+    }
+    .article-sources-item,
+    .article-content li {
+        margin: .5rem 0;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+        &::marker {
+            color: var(--main-clr);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+    &-container {
+        position: relative;
+    }
+    &-social {
+        position: sticky;
+        top: 8rem;
+        &-list {
+            position: absolute;
+            top: 2rem;
+            right: -8rem;
+            list-style-type: none;
+        }
+        &-item {
+            background-color: var(--main-clr);
+            border-radius: .8rem;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: .5rem;
+            a::before {
+                content: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                padding: .7rem;
+            }
+        }
+        &-label {
+            width: 100px;
+            font-size: .8rem;
+            margin-bottom: 1rem;
         }
     }
 }
