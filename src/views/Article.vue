@@ -1,8 +1,6 @@
 <template>
     <div class="article-view">
-        <header>
-            <div class="brand">Tricycle App</div>
-        </header>
+        <Header/>
         <main class="article">
             <div class="article-container">
                 <h1 class="article-title">{{ title }}</h1>
@@ -52,11 +50,13 @@
 </template>
 
 <script>
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default {
 	name: "Article",
     components: {
+        Header,
         Footer
     },
 	data() {
@@ -251,13 +251,22 @@ export default {
         position: relative;
     }
     &-social {
-        position: sticky;
-        top: 8rem;
+        @media (min-width: 720px) {
+            position: sticky;
+            top: 8rem;
+        }
         &-list {
-            position: absolute;
-            top: 2rem;
-            right: -8rem;
             list-style-type: none;
+            @media (min-width: 720px) {
+                position: absolute;
+                top: 2rem;
+                right: -8rem;
+            }
+            @media (max-width: 720px) {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
         }
         &-item {
             background-color: var(--main-clr);
@@ -265,6 +274,7 @@ export default {
             width: 3rem;
             height: 3rem;
             margin-bottom: .5rem;
+            margin-right: 0.5rem;
             a::before {
                 content: none;
             }
