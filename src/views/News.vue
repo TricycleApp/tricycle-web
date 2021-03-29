@@ -60,6 +60,9 @@ export default {
         &-title {
             font-size: 5rem;
         }
+		@media (max-width: 720px) {
+			margin: 0 1rem;
+		}
 	}
     &-list {
         list-style-type: none;
@@ -74,6 +77,9 @@ export default {
 	&-article {
         display: flex;
 		width: 100%;
+		@media (max-width: 720px) {
+			flex-direction: column;
+		}
 	}
 	&-link {
         display: block;
@@ -89,6 +95,9 @@ export default {
 		flex-direction: column;
 		flex: 1;
 		padding: 1rem 2rem;
+		@media (max-width: 720px) {
+			padding: 1rem;
+		}
 	}
 	&-title {
 		color: var(--main-clr);
@@ -101,10 +110,19 @@ export default {
         overflow: hidden;
     }
 	&-image {
-		min-width: 10rem;
-		min-height: 10rem;
-		width: 10rem;
-		height: 10rem;
+		@media (max-width: 720px) {
+			padding: 0 1rem;
+			padding-top: 1rem;
+			width: 100%;
+			max-height: 14rem;
+			height: 14rem;
+		}
+		@media (min-width: 720px) {
+			min-width: 10rem;
+			min-height: 10rem;
+			width: 10rem;
+			height: 10rem;
+		}
 		img {
             border-radius: 1rem;
 			width: 100%;

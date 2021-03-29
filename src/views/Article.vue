@@ -18,15 +18,17 @@
                     <img :src="'https://data.app-tricycle.com/assets/' + thumbnail" alt="" />
                 </div>
                 <div class="article-social">
-                    <ul class="article-social-list">
-                        <li class="article-social-label">Visitez nos réseaux 😊</li>
-                        <li class="article-social-item">
-                            <a href="https://twitter.com/TriCycle_app" title="Twitter"><img src="../assets/icons/twitter.svg" alt=""></a>
-                        </li>
-                        <li class="article-social-item"> 
-                            <a href="#" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
-                        </li>
-                    </ul>
+                    <div class="article-social-container">
+                        <h2 class="article-social-label">Visitez nos réseaux 😊</h2>
+                        <ul class="article-social-list">
+                            <li class="article-social-item">
+                                <a href="https://twitter.com/TriCycle_app" title="Twitter"><img src="../assets/icons/twitter.svg" alt=""></a>
+                            </li>
+                            <li class="article-social-item">
+                                <a href="#" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="article-accroche" v-html="accroche"></div>
                 <div class="article-content" v-html="content"></div>
@@ -78,7 +80,6 @@ export default {
         .then((res) => res.json())
         .then((res) => {
             const data = res.data;
-            console.log(data);
             this.title = data.title;
             this.thumbnail = data.thumbnail;
             this.accroche = data.accroche;
@@ -95,7 +96,6 @@ export default {
             })
             .then(res => res.json())
             .then(res => {
-                console.log(res.data);
                 this.author = res.data.first_name + ' ' + res.data.last_name;
             })
             // console.log(this.sources);
@@ -255,17 +255,21 @@ export default {
             position: sticky;
             top: 8rem;
         }
-        &-list {
-            list-style-type: none;
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             @media (min-width: 720px) {
                 position: absolute;
                 top: 2rem;
                 right: -8rem;
+                flex-direction: column;
             }
+        }
+        &-list {
+            list-style-type: none;
             @media (max-width: 720px) {
                 display: flex;
-                justify-content: flex-end;
-                align-items: center;
             }
         }
         &-item {
@@ -288,6 +292,46 @@ export default {
             width: 100px;
             font-size: .8rem;
             margin-bottom: 1rem;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .article {
+        &-title {
+            line-height: 3.4rem;
+        }
+        &-tags-item {
+            font-size: 0.8rem;
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+        }
+        &-thumbnail {
+            margin: 1.5rem 0;
+        }
+        &-date {
+            font-size: .9rem;
+        }
+        &-author-name {
+            font-size: .9rem;
+        }
+        &-accroche {
+            margin-bottom: 1rem;
+        }
+        &-accroche,
+        &-content {
+            p {
+                font-size: 1rem;
+            }
+            ol > li::marker {
+                font-size: 1rem;
+            }
+        }
+        .article-sources-item,
+        .article-content li {
+            font-size: 1rem;
+            &::marker {
+                font-size: 1rem;
+            }
         }
     }
 }

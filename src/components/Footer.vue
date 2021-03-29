@@ -43,9 +43,15 @@ footer {
     &-list {
         display: flex;
         list-style-type: none;
+        @media (max-width: 720px) {
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
     }
 	&-item {
-        margin-left: 3.75rem;
+        @media (min-width: 720px) {
+            margin-left: 3.75rem;
+        }
 	}
 }
 </style>
