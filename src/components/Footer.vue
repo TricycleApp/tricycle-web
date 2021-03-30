@@ -11,18 +11,24 @@
 				</li>
 			</ul>
 		</div>
+        <DarkSwitch/>
 	</footer>
 </template>
 
 <script>
+import DarkSwitch from "./DarkSwitch";
 export default {
 	name: "Footer",
+    components: {
+        DarkSwitch
+    }
 };
 </script>
 
 <style lang="scss">
 footer {
 	min-height: 12rem;
+    position: relative;
 	background-color: var(--background-emphase);
     padding: 2.2rem 1.8rem;
     display: flex;

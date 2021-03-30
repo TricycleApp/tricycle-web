@@ -335,4 +335,14 @@ export default {
         }
     }
 }
+
+.dark .article {
+
+    &-accroche,
+    &-content {
+        h2 {
+            background: linear-gradient(0deg, rgba(154, 199, 56, 0.6) 0%, rgba(154, 199, 56, 0.6) 49%, rgba(110,81,190,0) 50%);
+        }
+    }
+}
 </style>
