@@ -18,7 +18,14 @@
     font-family: 'Gordita';
     src: url("./font/Gordita-Bold.otf") format("truetype");
     font-display: swap;
-    font-weight: 600;
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gordita';
+    src: url("./font/Gordita-Black.otf") format("truetype");
+    font-display: swap;
+    font-weight: 800;
     font-style: normal;
 }
 :root {

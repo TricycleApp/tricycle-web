@@ -1,7 +1,9 @@
 <template>
 	<header>
 		<div class="header-brand">
-			<img class="logo" src="@/assets/logo.png" />
+			<router-link to="/" class="link">
+				<img class="logo" src="@/assets/logo.png" />
+			</router-link>
 		</div>
 		<ul class="header-menu">
 			<li>
@@ -26,6 +28,7 @@ export default {
 header {
 	background-color: var(--main-clr);
 	padding: 0 1rem;
+	display: flex;
 }
 .header { 
 	&-brand {
@@ -34,13 +37,12 @@ header {
 		font-weight: bold;
 		color: var(--white-font);
 		.logo {
-			height: 2rem;
+			height: 4rem;
 		}
 	}
 	&-menu {
 		list-style-type: none;
 		margin-left: auto;
-		margin-right: 4rem;
 		display: flex;
 		align-items: center;
 		li {
