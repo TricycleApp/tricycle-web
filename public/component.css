@@ -48,6 +48,8 @@
     --second-font: #4E4E4E;
     --delete-clr: #FAD5D5;
     --delete-font: #EB5757;
+    --invert-clr: #FFFFFF;
+    --invert-font: #9AC738;
 
 
     /* Inputs */
@@ -111,6 +113,7 @@
        --second-font: #FFFFFF;
        --delete-clr: #884448;
        --delete-font: #EB5757;
+       --invert-clr: #2E3F47;
 
        /* Inputs */
        --placeholder: #57656B;
@@ -315,6 +318,21 @@ button a::before {
 }
 .btn-delete a {
     color: var(--delete-font)!important;
+}
+
+/* Inverted button */
+.btn-invert {
+    background-color: var(--invert-clr);
+    color: var(--invert-font);
+}
+.btn-invert:hover {
+    background-color: var(--invert-hover);
+}
+.btn-invert:focus {
+    border-color: var(--invert-font);
+}
+.btn-invert a {
+    color: var(--invert-font)!important;
 }
 
 /* Liens */

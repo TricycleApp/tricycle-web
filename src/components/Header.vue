@@ -1,7 +1,19 @@
 <template>
-    <header>
-        <div class="brand">Tricycle App</div>
-    </header>
+	<header>
+		<div class="header-brand">
+			<img class="logo" src="@/assets/logo.png" />
+		</div>
+		<ul class="header-menu">
+			<li>
+				<router-link to="/news">News</router-link>
+			</li>
+			<li>
+				<button class="btn btn-invert">
+					<a href="#download">Téléchargez</a>
+				</button>
+			</li>
+		</ul>
+	</header>
 </template>
 
 <script>
@@ -14,11 +26,30 @@ export default {
 header {
 	background-color: var(--main-clr);
 	padding: 0 1rem;
-	.brand {
+}
+.header { 
+	&-brand {
 		padding: 2rem;
 		font-size: 1.4rem;
 		font-weight: bold;
 		color: var(--white-font);
+		.logo {
+			height: 2rem;
+		}
+	}
+	&-menu {
+		list-style-type: none;
+		margin-left: auto;
+		margin-right: 4rem;
+		display: flex;
+		align-items: center;
+		li {
+			margin: 0 1rem;
+			a {
+				color: white;
+				font-weight: bold;
+			}
+		}
 	}
 }
 </style>
