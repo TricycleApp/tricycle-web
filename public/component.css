@@ -34,6 +34,7 @@
     --main-hover: #8FBE2C;
     --second-hover: #DEDEDE;
     --delete-hover: #FEC7C7;
+    --invert-hover: #F3FAE4;
     --main-border: #FFFFFF;
     --second-border: #D1D1D1;
     --card: #FFFFFF;
@@ -99,6 +100,7 @@
        --main-hover: #ADD852;
        --second-hover: #3A4E57;
        --delete-hover: #AE585D;
+       --invert-hover: #3A4E57;
        --main-border: #595C5D;
        --second-border: #FFFFFF;
        --card: #2E3F47;
@@ -359,7 +361,7 @@ a::before {
     background-color: var(--main-hover);
     opacity: .4;
     z-index: -1;
-}
+} 
 a:focus::before,
 a:hover::before {
     transform: scaleX(1);
@@ -368,7 +370,13 @@ a:hover::before {
 a:visited {
     color: var(--link-active);
 }
-
+a.link:visited,
+a.link {
+    color: var(--background);
+}
+a.link::before {
+    content: none;
+}
 
 /* Actions buttons */
 .action {

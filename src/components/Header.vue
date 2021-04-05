@@ -5,11 +5,11 @@
 		</div>
 		<ul class="header-menu">
 			<li>
-				<router-link to="/news">News</router-link>
+				<router-link to="/news" class="link">News</router-link>
 			</li>
 			<li>
 				<button class="btn btn-invert">
-					<a href="#download">Téléchargez</a>
+					<a href="#download" class="link">Téléchargez</a>
 				</button>
 			</li>
 		</ul>
@@ -46,7 +46,6 @@ header {
 		li {
 			margin: 0 1rem;
 			a {
-				color: white;
 				font-weight: bold;
 			}
 		}
