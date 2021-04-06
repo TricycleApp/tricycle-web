@@ -9,7 +9,7 @@
 						<p class="intro-subtitle">😎 L'app qui vous aide à trier <span class="underline">facilement</span></p>
 					</div>
 					<div class="intro-img">
-						<img src="@/assets/phone.png" alt="" />
+						<img src="@/assets/phone.png" alt="" id="main-img"/>
 					</div>
 				</div>
 			</section>
@@ -36,28 +36,28 @@
 				<div class="feature-container">
 					<h3 class="feature-title">Scan</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" />
+						<img src="@/assets/phone.png" alt="" class="left-phone"/>
 					</div>
 					<p class="feature-text">Le scan est le moyen simple et rapide de les emballages d'un produit en scannant son code barre et savoir où les trié 📷</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Détails</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" />
+						<img src="@/assets/phone.png" alt="" class="right-phone"/>
 					</div>
 					<p class="feature-text">Visualisé les détails du produit, où et comment le trier.</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Recherche</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" />
+						<img src="@/assets/phone.png" alt="" class="left-phone"/>
 					</div>
 					<p class="feature-text">Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter un produit sans le scanner. Recherchez un produit par catégorie, si vous n'avez pas son nom 🧐</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">News</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" />
+						<img src="@/assets/phone.png" alt="" class="right-phone"/>
 					</div>
 					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
 				</div>
@@ -99,6 +99,13 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 export default {
 	name: "Home",
 	components: {
@@ -109,6 +116,44 @@ export default {
 		return {
 			articles: [],
 		};
+	},
+	mounted() {
+		gsap.to("#main-img", { 
+			scrollTrigger: {
+				trigger: "#main-img",
+				toggleActions: 'play complete reverse reverse',
+				start: "900px bottom",
+			},
+			rotateZ: 10,
+			ease: "power3.out",
+			duration: 1.6,
+		});
+		let left = gsap.utils.toArray('.left-phone');
+		left.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete reverse reverse',
+					start: "600px bottom",
+				},
+				rotateZ: 10,
+				ease: "power3.out",
+				duration: 3,
+			});
+		})
+		let right = gsap.utils.toArray('.right-phone');
+		right.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete reverse reverse',
+					start: "600px bottom",
+				},
+				rotateZ: -10,
+				ease: "power3.out",
+				duration: 3,
+			});
+		})
 	},
 	created() {
 		fetch(`https://data.app-tricycle.com/items/articles?fields=id,title,accroche,thumbnail,tags.tags_id.name?limit=5`, {
