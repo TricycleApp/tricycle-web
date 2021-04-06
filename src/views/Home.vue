@@ -1,486 +1,568 @@
 <template>
-  <div class="vitrine">
-    <header>
-      <img class="logo" src="@/assets/logo.png">
-      <ul class="menu">
-        <li>
-          <router-link to="/news">News</router-link>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <section class="flex-container6">
-        <div>
-          <img src="@/assets/scan.png" class="phone">
-        </div>
-        <div>
-          <h1>TriCycle App</h1>
-          <h2>L'application qui vous aide à trier !</h2>
-        </div>
-        <div>
-          <a href="https://play.google.com/store/apps/details?id=dev.tricycle&hl=fr">
-            <img src="@/assets/play-button.png" alt="télécharger sur le playstore" class="play-store">
-          </a>
-        </div>
-      </section>
-      <section class="speech1">
-        <h3>TriCycle est une nouvelle application qui vous propose diverses fonctionnalités, pour vous aider à mieux
-          trier vos déchêts et à préserver la planète ! Cet application est réalisé par un groupe de quatres étudiants en étude supérieur
-          dans le cadre d'un projet scolaire. Ce projet est à but non lucratif.</h3>
-      </section>
-      <section class="speech2">
-        <h3>Vous n'aurez plus à vous demander où se trie tel ou tel produit, vous n'aurez qu'à le scanner avec
-          TriCycle pour le savoir !</h3>
-      </section>
-      <section class="flex-container">
-        <div class="screen1">
-          <picture>
-            <source srcset="@/assets/product-desktop.png" media="(min-width: 800px)">
-            <img src="@/assets/product-mobile.png" alt="Capture du scan d'un produit">
-          </picture>
-        </div>
-        <div class="scan">
-          <h3>Scan de produit</h3>
-          <p>La fonction principale de notre application,
-            le scan vous permet de connaître les composants d'un produit en scannant son code barre. Simple et rapide !</p>
-        </div>
-
-      </section>
-      <section class="flex-container2">
-        <div class="history">
-          <h3>Recherche</h3>
-          <p>Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter tel ou tel produit sans le
-            scanner. Différentes catégories sont également disponibles si vous ne connaissez pas le nom exacte.</p>
-        </div>
-        <div class="screen2">
-          <img src="@/assets/recherche.png" />
-          <img src="@/assets/search.png" alt="Capture d'écran de la fonction recherche" class="loupe">
-        </div>
-      </section>
-      <section class="flex-container3">
-        <div class="screen3">
-          <picture>
-            <source srcset="@/assets/profil-desktop.png" media="(min-width: 800px)">
-            <img src="@/assets/profil-mobile.png" alt="Capture d'écran de la page profil">
-          </picture>
-        </div>
-        <div class="stats">
-          <h3>Profil</h3>
-          <p>Le profil vous permet de voir vos statistiques et vos points. Il regroupe également tout l'aspect
-            communautaire. Vous pourrez une fois connecté, ajouter des produits directement dans l'application lors d'un scan si le produit ne se trouve pas dans la base de donnée.</p>
-        </div>
-      </section>
-      <section>
-        <a href="https://play.google.com/store/apps/details?id=dev.tricycle&hl=fr">
-          <button class="bouton">Télécharger</button>
-        </a>
-      </section>
-    </main>
-    <footer class="flex-container5">
-      <p>Tous droits réservé</p>
-      <div class="legal">
-        <router-link to="/privacy" >Politique de confidentialité</router-link>
-        <router-link to="/agreement" >Conditions d'utilisations</router-link>
-      </div>
-      <div class="flex-footer">
-        <p>N'hésitez pas à nous suivre sur Twitter pour être au courant des dernières nouveautés !</p>
-        <a href="https://twitter.com/TriCycle_app"><img class="twitter" src="@/assets/twitter.png"></a>
-      </div>
-    </footer>
-  </div>
+	<div class="presentation">
+		<Header />
+		<main>
+			<section id="intro" class="intro">
+				<div class="intro-container">
+					<div class="intro-text">
+						<h1 class="intro-title">Tricycle App</h1>
+						<p class="intro-subtitle">😎 L'app qui vous aide à trier <span class="underline">facilement</span></p>
+					</div>
+					<div class="intro-img">
+						<img src="@/assets/phone.png" alt="" id="main-img"/>
+					</div>
+				</div>
+			</section>
+			<section id="overview" class="overview">
+				<div class="overview-infos">
+					<h2 class="overview-title">Ne vous prenez plus la tête pour trier.😉</h2>
+					<p class="overview-text">Tricycle App est une application permettant de vous aidez à trier vos déchets, en les scannant vous aurez accès aux informations du produit et la manière de le trier.</p>
+				</div>
+				<div class="overview-img">
+					<img src="@/assets/sort-products.svg" alt="" />
+				</div>
+			</section>
+			<section id="download">
+				<div class="download">
+					<p class="download-text">Essayez la !<br />C'est gratuit 😊</p>
+					<div class="download-button">
+						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
+						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
+					</div>
+				</div>
+			</section>
+			<section id="feature">
+				<h2 class="feature-section-title">Découvrez notre application</h2>
+				<div class="feature-container">
+					<h3 class="feature-title">Scan</h3>
+					<div class="feature-img">
+						<img src="@/assets/phone.png" alt="" class="left-phone"/>
+					</div>
+					<p class="feature-text">Le scan est le moyen simple et rapide de les emballages d'un produit en scannant son code barre et savoir où les trié 📷</p>
+				</div>
+				<div class="feature-container">
+					<h3 class="feature-title">Détails</h3>
+					<div class="feature-img">
+						<img src="@/assets/phone.png" alt="" class="right-phone"/>
+					</div>
+					<p class="feature-text">Visualisé les détails du produit, où et comment le trier.</p>
+				</div>
+				<div class="feature-container">
+					<h3 class="feature-title">Recherche</h3>
+					<div class="feature-img">
+						<img src="@/assets/phone.png" alt="" class="left-phone"/>
+					</div>
+					<p class="feature-text">Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter un produit sans le scanner. Recherchez un produit par catégorie, si vous n'avez pas son nom 🧐</p>
+				</div>
+				<div class="feature-container">
+					<h3 class="feature-title">News</h3>
+					<div class="feature-img">
+						<img src="@/assets/phone.png" alt="" class="right-phone"/>
+					</div>
+					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
+				</div>
+			</section>
+			<section id="download2">
+				<div class="download">
+					<p class="download-text">L'appli vous tente ?<br />Téléchargez le !⚡</p>
+					<div class="download-button">
+						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
+						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
+					</div>
+				</div>
+			</section>
+			<section id="articles">
+				<h2 class="articles-title">News</h2>
+				<p class="articles-text">Des articles positifs sur l'environnement</p>
+				<ul class="news-list">
+					<li v-for="article in articles" :key="article.id" class="news-item">
+						<router-link :to="'/article/' + article.id" class="news-link">
+							<div class="news-article">
+								<div class="news-image">
+									<img :src="'https://data.app-tricycle.com/assets/' + article.thumbnail" alt="" />
+								</div>
+								<div class="news-infos">
+									<h2 class="news-title">{{ article.title }}</h2>
+									<p class="news-hook" v-html="article.accroche">{{ article.accroche }}</p>
+								</div>
+							</div>
+						</router-link>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</div>
 </template>
 
 <script>
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 export default {
-  name: 'Home',
-  components: {
-  }
-}
+	name: "Home",
+	components: {
+		Header,
+		Footer,
+	},
+	data() {
+		return {
+			articles: [],
+		};
+	},
+	mounted() {
+		gsap.to("#main-img", { 
+			scrollTrigger: {
+				trigger: "#main-img",
+				toggleActions: 'play complete reverse reverse',
+				start: "900px bottom",
+			},
+			rotateZ: 10,
+			ease: "power3.out",
+			duration: 1.6,
+		});
+		let left = gsap.utils.toArray('.left-phone');
+		left.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete reverse reverse',
+					start: "600px bottom",
+				},
+				rotateZ: 10,
+				ease: "power3.out",
+				duration: 3,
+			});
+		})
+		let right = gsap.utils.toArray('.right-phone');
+		right.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete reverse reverse',
+					start: "600px bottom",
+				},
+				rotateZ: -10,
+				ease: "power3.out",
+				duration: 3,
+			});
+		})
+	},
+	created() {
+		fetch(`https://data.app-tricycle.com/items/articles?fields=id,title,accroche,thumbnail,tags.tags_id.name?limit=5`, {
+			method: "GET",
+		})
+        .then((res) => res.json())
+        .then((res) => {
+            this.articles = res.data;
+        });
+	},
+};
 </script>
 
 <style lang="scss" scoped>
-.vitrine {
-    body{
-        height: 100%;
-        background-color: #9AC738;
-        font-family: "proxima_nova";
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    .twitter{
-        width: 40px;
-        height: 40px;
-    }
-
-    h1{
-        color: #F3FAE1;
-        font-size: 4rem;
-    }
-    h2 {
-        color: #F3FAE1;
-        padding: 0 2rem;
-    }
-    .speech1 h3{
-        padding: 0 .7rem;
-    }
-
-    .phone {
-        width: 70vw;
-    }
-    section:first-of-type {
-        margin: 4rem 0;
-    }
-
-    section:first-of-type > div {
-        display: flex;
-        justify-content: center;
-    }
-
-    section {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 6rem;
-    }
-
-    section div h3 {
-        font-size: 2rem;
-    }
-    .speech1, .speech2 {
-        text-align: center;
-        font-size: 1.3rem;
-    }
-
-    .speech1{
-        background-color: white;
-        color: #9AC738;
-        padding: 3rem 0;
-        align-items: center;
-    }
-
-    .speech2{
-        text-align: center;
-        color: #F3FAE1;
-        padding: 0 2rem;
-    }
-
-    .speech1 h3, .speech2 h3 {
-        max-width: 100vw;
-    }
-
-
-    .scan, .history, .stats{
-        padding: 2rem;
-        color:  #F3FAE1;
-    }
-
-    .screen1, .screen2, .screen3{
-        width: 100%;
-        display: flex;
-    }
-
-    .screen2 {
-        justify-content: center;
-    }
-    .screen3 {
-        justify-content: flex-end;
-    }
-
-    .screen1 img, .screen3 img {
-        width: 95vw;
-    }
-
-    .screen2 img {
-        transform: rotate(-15deg);
-        width: 75%;
-    }
-    a{
-        text-decoration: none;
-    }
-    .bouton{
-        padding: 1rem;
-        width: 300px;
-        max-width: 70vw;
-        border-radius: 1rem;
-        border: none;
-        background-color: white;
-        color: #9AC738;
-        display: block;
-        margin: auto;
-        font-weight: bold;
-        font-size: large;
-    }
-
-    .bouton:hover{
-        cursor: pointer;
-        background-color: rgb(228, 233, 217);
-    }
-
-
-    /*flex*/
-
-    .flex-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .flex-container2::after {
-        content: '';
-        background-color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 50%;
-        z-index: -5;
-        transform: skewY(-15deg);
-    }
-
-    .flex-container2 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-    }
-
-    .flex-container3 {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-    }
-
-
-    .flex-container5 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color:  white;
-    }
-
-    .flex-container6 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .droits {
-        text-align: left;
-    }
-
-
-    .loupe {
-        display: none;
-    }
-
-    footer {
-        padding: 1rem 2rem;
-        margin-top: 4rem;
-    }
-
-    .flex-footer {
-        display: flex;
-        align-items: center;
-    }
-
-    .flex-footer img{
-        margin: 0 2rem;
-    }
-    .logo {
-        display: inline-block;
-        width:20rem;
-        margin: 2rem;
-    }
-    .play-store {
-        width: 15rem;
-        height: 5rem;
-    }
-
-    .play-store:active, button:active {
-        transform: scale(0.98);
-    }
-
-    button:focus {
-        outline: none;
-    }
-    .flex-container6 div:last-of-type {
-        justify-content: flex-start;
-    }
-    .flex-container6 div:nth-of-type(2) {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-    }
-    .legal a{
-        color: #000;
-        margin-right: 2rem;
-    }
-
-    @media screen and (max-width: 600px){
-        .flex-container2{
-            flex-direction: column-reverse;
-        }
-        .flex-container6{
-            display: flex;
-            justify-content:space-between;
-        }
-        section{
-            flex-direction: column;
-            
-        }
-        h1{
-            font-size: 3rem;
-            padding: 0 2rem;
-        }
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-        .flex-footer img {
-            margin: 0;
-        }
-        .speech1 {
-            padding: 5rem 0;
-        }
-        .logo {
-            width: 80vw;
-
-        }
-    }
-
-    @media screen and (max-width: 400px){
-        .flex-container2{
-            flex-direction: column-reverse;
-        }
-        .flex-container6{
-            display: flex;
-            justify-content:space-between;
-        }
-        section{
-            flex-direction: column;
-        }
-        footer {
-            flex-direction: column;
-        }
-        footer p {
-            font-size: .8rem;
-        }
-
-    }
-
-
-
-
-
-    @media (min-width: 600px) {
-        section {
-            max-width: 100vw;
-        }
-        h1 {
-            font-size: 6rem;
-        }
-        h2 {
-            padding: 0;
-        }
-        .phone {
-            width: 25vw;
-        }
-        .flex-container, .flex-container3 {
-            width: 100%;
-        }
-
-        .flex-container3 {
-            flex-direction: row-reverse;
-        }
-        .screen2 {
-            position: relative;
-        }
-
-        .flex-container6 {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 50% 50%;
-        }
-        .flex-container6 div:nth-of-type(1) {
-            grid-row: span 2;
-        }
-        .flex-container6 div:nth-of-type(2) {
-            display: flex;
-            flex-direction: column;
-            width: auto;
-            grid-row: 1;
-            grid-column: 2;
-        }
-        .screen1,
-        .screen2,
-        .screen3 {
-            width: fit-content;
-        }
-        .flex-container2 {
-            position: relative;
-        }
-        .loupe {
-            height: 30rem;
-            width: 30rem!important;
-            position: absolute;
-            left: -15rem;
-            bottom: 0;
-            display: block;
-            z-index: -2;
-        }
-        .flex-container2::after {
-            height: 50rem;
-            transform: skewY(-20deg);
-        }
-        .history {
-            position: relative;
-            top: 12rem;
-            color: #9AC738;
-        }
-        .scan {
-            position: relative;
-            top: -5rem;
-        }
-        .flex-container3 {
-            margin-top: 20rem;
-        }
-        .screen2 img:first-of-type {
-            transform: rotate(0);
-            width: 27vw;
-            position: relative;
-            top: -4rem;
-        }
-        .history, .scan, .stats {
-            display: flex;
-            flex-direction: column;
-        }
-        .scan, .stats {
-            padding: 0 10rem;
-        }
-        .history h3, .scan h3, .stats h3 {
-            font-size: 3rem;
-        }
-        .history p, .scan p, .stats p {
-            font-size: 1.5rem;
-        }
-        .history p {
-            width: 35vw;
-        }
-    }
-    header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    }
+$brk: 870px;
+.presentation {
+	color: var(--white-font);
+	background: var(--main-clr);
+	overflow: hidden;
+	main {
+		max-width: 2000px;
+		margin: 0 auto;
+	}
+	footer {
+		color: var(--main-font);
+		margin-top: 0;
+	}
 }
-.vitrine {
-  background: var(--main-clr);
-  .flex-container2 {
-    z-index: 0;
-  }
+
+.underline {
+	display: inline-block;
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		background-color: var(--white-font);
+		height: 0.25rem;
+		width: 100%;
+		position: absolute;
+		bottom: -0.3rem;
+		left: 0;
+	}
+}
+#intro,
+#overview,
+#download,
+#download2,
+#feature {
+	padding-right: 6rem;
+	padding-left: 6rem;
+	@media (max-width: $brk) {
+		padding-right: 1.6rem;
+		padding-left: 1.6rem;
+	}
+}
+#overview,
+#download,
+#download2 {
+	max-width: 1400px;
+	margin: 0 auto
+}
+
+.intro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding-top: 4rem;
+	padding-bottom: 12rem;
+	margin-bottom: 6rem;
+	min-height: calc(100vh - 4rem);
+	@media (max-width: $brk) {
+		min-height: 50vh;
+		flex-direction: column;
+	}
+	&-container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		transform: rotateZ(-6deg) translateX(-2rem);
+		@media (max-width: $brk) {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+	&-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+	}
+	&-title {
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 10rem;
+		font-size: clamp(30px , calc(10vw + 1.2rem), 300px);
+		letter-spacing: -3px;
+		line-height: clamp(30px , calc(10vw + 1.2rem), 300px);
+		width: 8ch;
+		margin-top: 2rem;
+	}
+	&-subtitle {
+		font-weight: 500;
+		width: 20ch;
+		margin-top: 1rem;
+	}
+	&-img {
+		height: 30vw;
+		width: 23vw;
+		@media (max-width: $brk) {
+			width: 50vw;
+			height: 48vw;
+			position: relative;
+			top: 2rem;	
+			transform: rotateZ(19deg);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&::after {
+		content: '';
+		background-color: var(--white-font);
+		display: block;
+		width: 110vw;
+		height: 8rem;
+		position: absolute;
+		bottom: 0rem;
+		left: -4rem;
+		transform: rotateZ(-6deg);
+		@media (max-width: $brk) {
+			left: -1rem;
+			height: 6rem;
+		}
+		@media (min-width: 2100px) {
+			left: -50%;
+			transform: rotateZ(-6deg) translateX(35%);
+		}
+	}
+}
+.overview {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&#overview{
+		padding-bottom: 5rem;
+	}
+	@media (max-width: $brk) {
+		flex-direction: column;
+	}
+	&-infos {
+		max-width: 42ch;
+	}
+	&-title {
+		margin-bottom: 2rem;
+	}
+	&-text {
+		padding-right: 2rem;		
+	}
+	&-img {
+		margin: 0 6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $brk) {
+			width: 100%;
+			margin: 2rem 0;
+		}
+
+	}
+}
+#download,
+#download2  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.download {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--green-card);
+	padding: 2rem 3rem;
+	border-radius: .5rem;
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	@media (max-width: $brk) {
+		align-items: flex-start;
+		flex-direction: column;
+		width: fit-content;
+	}
+	&-text {
+		font-size: 2.2rem;
+		font-weight: bold;
+	}
+	&-button {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 0;
+		width: fit-content;
+		flex-direction: column;
+		@media (max-width: $brk) {
+			margin-top: 2rem;
+		}
+	}
+	&-link {
+		margin: .5rem 0;
+		img {
+			height: 3rem;
+		}
+	}
+}
+#feature {
+	position: relative;
+	padding-top: 10rem;
+	&::after {
+		content: '';
+		background-color: var(--white-font);
+		display: block;
+		width: 110vw;
+		height: 8rem;
+		position: absolute;
+		top: -4rem;
+		left: -4rem;
+		z-index: 0;
+		transform: rotateZ(3deg);
+		@media (max-width: $brk) {
+			left: -1rem;
+			height: 6rem;
+		}
+		@media (min-width: 2100px) {
+			left: -50%;
+			transform: rotateZ(3deg) translateX(-35%);
+		}
+	}
+}
+.feature {
+	&-section-title {
+		margin: 0 auto;
+		width: fit-content;
+		font-size: 1.8rem;
+		margin-top: 5rem;
+	}
+	&-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: flex-end;
+		@media (max-width: $brk) {
+			display: flex;
+			flex-direction: column;
+			margin: 3rem 0;
+		}
+		&:nth-of-type(even) {
+			justify-items: flex-start;
+			.feature-title {
+				text-align: left;
+				left: -1.5rem;
+				right: unset;
+				@media (max-width: $brk) {
+					left: unset;
+				}
+			}
+			.feature-text {
+				grid-column: 1;
+			}
+			.feature-img {
+				grid-column: 2;
+				img {
+					transform: rotateZ(-20deg);
+				}
+			}
+		}
+	}
+	&-title {
+		grid-column: span 2;
+		grid-row: 1;
+		font-size: 20rem;
+		text-transform: uppercase;
+		font-weight: 800;
+		overflow: hidden;
+		text-align: right;
+		position: relative;
+		width: fit-content;
+		left: unset;
+		right: -1.5rem;
+		@media (max-width: $brk) {
+			font-size: 5rem;
+			right: unset;
+		}
+	}
+	&-text {
+		grid-column: 2;
+		grid-row: 2;
+		font-size: 1.4rem;
+		max-width: 35ch;
+		@media (max-width: $brk) {
+			position: relative;
+			top: -6rem;
+		}
+	}
+	&-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		grid-column: 1;
+		grid-row: 2;
+		position: relative;
+		top: -15rem;
+		height: 40vw;
+		width: 33vw;
+		@media (max-width: $brk) {
+			top: -5rem;
+			right: -13rem;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			transform: rotateZ(20deg);
+		}
+	}
+}
+#articles {
+	background: var(--background);
+	color: var(--main-clr);
+	padding: 2rem 0;
+	margin-top: 10rem;
+	.articles-title {
+		font-size: 3rem;
+		margin-left: 2rem;
+	}
+	.articles-text {
+		margin-left: 2rem;
+	}
+	.news {
+		&-container {
+			margin: 0 auto;
+			margin-top: 4rem;
+			max-width: 800px;
+			min-height: calc(100vh - 400px);
+			&-title {
+				font-size: 5rem;
+			}
+		}
+		&-list {
+			list-style-type: none;
+			display: flex;
+			overflow-X: scroll;
+		}
+		&-item {
+			margin: 2rem 2rem;
+			--link-active: var(--main-font);
+			border-radius: 1rem;
+			background: var(--background-emphase);
+			box-shadow: var(--shdw);
+			width: 25rem;
+		}
+		&-article {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+		}
+		&-link {
+			display: block;
+			color: var(--main-font);
+			padding: 1rem;
+			width: 100%;
+			height: 100%;
+			&::before {
+				border-radius: 1rem;
+				opacity: 0.1;
+			}
+		}
+		&-infos {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+		}
+		&-title {
+			color: var(--main-clr);
+			margin-bottom: .5rem;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+		&-hook {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+		&-image {
+			padding: 0 1rem;
+			padding-top: 1rem;
+			width: 100%;
+			max-height: 14rem;
+			height: 14rem;
+			width: 23rem;
+			img {
+				border-radius: 1rem;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
 }
 </style>

@@ -42,6 +42,9 @@ footer {
         display: flex;        
         flex-wrap: wrap-reverse;
         justify-content: space-between;
+        @media (max-width: 720px) {
+            flex-direction: column-reverse;
+        }
     }
     &-copyright {
         opacity: 0.4;
