@@ -25,10 +25,16 @@ export default {
 </script>
 
 <style lang="scss">
+$brk: 870px;
+
 header {
 	background-color: var(--main-clr);
 	padding: 0 1rem;
 	display: flex;
+	@media (max-width: $brk) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .header { 
 	&-brand {
@@ -38,6 +44,7 @@ header {
 		color: var(--white-font);
 		.logo {
 			height: 4rem;
+			object-fit: contain;
 		}
 	}
 	&-menu {
@@ -45,6 +52,9 @@ header {
 		margin-left: auto;
 		display: flex;
 		align-items: center;
+		@media (max-width: $brk) {
+			margin: 0 auto;
+		}
 		li {
 			margin: 0 1rem;
 			a {

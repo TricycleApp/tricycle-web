@@ -24,7 +24,7 @@
 			</section>
 			<section id="download">
 				<div class="download">
-					<p class="download-text">Essayez la!<br />C'est gratuit 😊</p>
+					<p class="download-text">Essayez la !<br />C'est gratuit 😊</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
 						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
@@ -159,6 +159,10 @@ $brk: 870px;
 #feature {
 	padding-right: 6rem;
 	padding-left: 6rem;
+	@media (max-width: $brk) {
+		padding-right: 1.6rem;
+		padding-left: 1.6rem;
+	}
 }
 #overview,
 #download,
@@ -177,6 +181,7 @@ $brk: 870px;
 	margin-bottom: 6rem;
 	min-height: calc(100vh - 4rem);
 	@media (max-width: $brk) {
+		min-height: 50vh;
 		flex-direction: column;
 	}
 	&-container {
@@ -184,6 +189,10 @@ $brk: 870px;
 		align-items: flex-start;
 		justify-content: center;
 		transform: rotateZ(-6deg) translateX(-2rem);
+		@media (max-width: $brk) {
+			flex-direction: column;
+			align-items: flex-end;
+		}
 	}
 	&-text {
 		display: flex;
@@ -209,6 +218,13 @@ $brk: 870px;
 	&-img {
 		height: 30vw;
 		width: 23vw;
+		@media (max-width: $brk) {
+			width: 50vw;
+			height: 48vw;
+			position: relative;
+			top: 2rem;	
+			transform: rotateZ(19deg);
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -225,6 +241,10 @@ $brk: 870px;
 		bottom: 0rem;
 		left: -4rem;
 		transform: rotateZ(-6deg);
+		@media (max-width: $brk) {
+			left: -1rem;
+			height: 6rem;
+		}
 		@media (min-width: 2100px) {
 			left: -50%;
 			transform: rotateZ(-6deg) translateX(35%);
@@ -242,7 +262,7 @@ $brk: 870px;
 		flex-direction: column;
 	}
 	&-infos {
-		width: 42ch;
+		max-width: 42ch;
 	}
 	&-title {
 		margin-bottom: 2rem;
@@ -252,9 +272,14 @@ $brk: 870px;
 	}
 	&-img {
 		margin: 0 6rem;
-		img {
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $brk) {
+			width: 100%;
+			margin: 2rem 0;
 		}
+
 	}
 }
 #download,
@@ -274,7 +299,9 @@ $brk: 870px;
 	z-index: 5;
 	width: 100%;
 	@media (max-width: $brk) {
+		align-items: flex-start;
 		flex-direction: column;
+		width: fit-content;
 	}
 	&-text {
 		font-size: 2.2rem;
@@ -282,8 +309,13 @@ $brk: 870px;
 	}
 	&-button {
 		display: flex;
+		justify-content: space-between;
+		margin-top: 0;
+		width: fit-content;
 		flex-direction: column;
-
+		@media (max-width: $brk) {
+			margin-top: 2rem;
+		}
 	}
 	&-link {
 		margin: .5rem 0;
@@ -306,6 +338,10 @@ $brk: 870px;
 		left: -4rem;
 		z-index: 0;
 		transform: rotateZ(3deg);
+		@media (max-width: $brk) {
+			left: -1rem;
+			height: 6rem;
+		}
 		@media (min-width: 2100px) {
 			left: -50%;
 			transform: rotateZ(3deg) translateX(-35%);
@@ -326,6 +362,7 @@ $brk: 870px;
 		@media (max-width: $brk) {
 			display: flex;
 			flex-direction: column;
+			margin: 3rem 0;
 		}
 		&:nth-of-type(even) {
 			justify-items: flex-start;
@@ -333,6 +370,9 @@ $brk: 870px;
 				text-align: left;
 				left: -1.5rem;
 				right: unset;
+				@media (max-width: $brk) {
+					left: unset;
+				}
 			}
 			.feature-text {
 				grid-column: 1;
@@ -354,14 +394,23 @@ $brk: 870px;
 		overflow: hidden;
 		text-align: right;
 		position: relative;
+		width: fit-content;
 		left: unset;
 		right: -1.5rem;
+		@media (max-width: $brk) {
+			font-size: 5rem;
+			right: unset;
+		}
 	}
 	&-text {
 		grid-column: 2;
 		grid-row: 2;
 		font-size: 1.4rem;
-		width: 35ch;
+		max-width: 35ch;
+		@media (max-width: $brk) {
+			position: relative;
+			top: -6rem;
+		}
 	}
 	&-img {
 		display: flex;
@@ -373,6 +422,10 @@ $brk: 870px;
 		top: -15rem;
 		height: 40vw;
 		width: 33vw;
+		@media (max-width: $brk) {
+			top: -5rem;
+			right: -13rem;
+		}
 		img {
 			width: 100%;
 			height: 100%;
