@@ -11,52 +11,52 @@
 					<img src="@/assets/phone.png" alt="" />
 				</div>
 			</section>
-			<section id="overview">
+			<section id="overview" class="overview">
 				<div class="overview-infos">
 					<h2 class="overview-title">Ne vous prenez plus la tête pour trier.😉</h2>
 					<p class="overview-text">Tricycle App est une application permettant de vous aidez à trier vos déchets, en les scannant vous aurez accès aux informations du produit et la manière de le trier.</p>
 				</div>
 				<div class="overview-img">
-					<img src="" alt="" />
+					<img src="@/assets/sort-products.svg" alt="" />
 				</div>
 			</section>
 			<section id="download">
 				<div class="download">
 					<p class="download-text">Essayez la!<br />C'est gratuit 😊</p>
 					<div class="download-button">
-						<a href="" class="download-link"><img src="" alt=""/></a>
-						<a href="" class="download-link"><img src="" alt=""/></a>
+						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
+						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
 					</div>
 				</div>
 			</section>
 			<section id="feature">
-				<h2>Découvrez notre application</h2>
+				<h2 class="section-title">Découvrez notre application</h2>
 				<div class="feature-container">
 					<h3 class="feature-title">Scan</h3>
 					<p class="feature-text">Le scan est le moyen simple et rapide de les emballages d'un produit en scannant son code barre et savoir où les trié📷</p>
 					<div class="feature-img">
-						<img src="" alt="" />
+						<img src="@/assets/phone.png" alt="" />
 					</div>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Détails</h3>
 					<p class="feature-text">Visualisé les détails du produit, où et comment le trier.</p>
 					<div class="feature-img">
-						<img src="" alt="" />
+						<img src="@/assets/phone.png" alt="" />
 					</div>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Recherche</h3>
 					<p class="feature-text">Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter un produit sans le scanner. Recherchez un produit par catégorie, si vous n'avez pas son nom 🧐</p>
 					<div class="feature-img">
-						<img src="" alt="" />
+						<img src="@/assets/phone.png" alt="" />
 					</div>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">News</h3>
 					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
 					<div class="feature-img">
-						<img src="" alt="" />
+						<img src="@/assets/phone.png" alt="" />
 					</div>
 				</div>
 			</section>
@@ -64,12 +64,12 @@
 				<div class="download">
 					<p class="download-text">L'appli vous tente ?<br />Téléchargez le !⚡</p>
 					<div class="download-button">
-						<a href="" class="download-link"><img src="" alt=""/></a>
-						<a href="" class="download-link"><img src="" alt=""/></a>
+						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
+						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
 					</div>
 				</div>
 			</section>
-			<section id="news">
+			<section id="articles">
 				<h2 class="news-title">News</h2>
 				<p class="news-text">Des articles positifs sur l'environnement</p>
 				<ul class="news-list">
@@ -163,5 +163,80 @@ export default {
 	}
 	&-img {
 	}
+}
+.overview {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	&-infos {
+
+	}
+	&-title {
+
+	}
+	&-text {
+		
+	}
+	&-img {
+		img {
+
+		}
+	}
+}
+.download {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&-text {
+
+
+	}
+	&-button {
+		display: flex;
+		flex-direction: column;
+
+	}
+	&-link {
+		img {
+
+		}
+	}
+}
+.feature {
+	&-section-title {
+
+	}
+	&-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		&:nth-of-type(even) {
+			.feature-img {
+				grid-column: 2;
+			}
+			.feature-text {
+				grid-column: 1;
+			}
+		}
+	}
+	&-title {
+		grid-column: span 2;
+		grid-row: 1;
+		font-size: 10rem;
+	}
+	&-text {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	&-img {
+		grid-column: 1;
+		grid-row: 2;
+		img {
+
+		}
+	}
+}
+#articles {
+	background: var(--background);
+	color: var(--main-clr);
 }
 </style>
