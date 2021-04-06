@@ -62,7 +62,7 @@
 					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
 				</div>
 			</section>
-			<section id="download">
+			<section id="download2">
 				<div class="download">
 					<p class="download-text">L'appli vous tente ?<br />Téléchargez le !⚡</p>
 					<div class="download-button">
@@ -128,6 +128,10 @@ $brk: 870px;
 	color: var(--white-font);
 	background: var(--main-clr);
 	overflow: hidden;
+	main {
+		max-width: 2000px;
+		margin: 0 auto;
+	}
 	footer {
 		color: var(--main-font);
 		margin-top: 0;
@@ -148,6 +152,21 @@ $brk: 870px;
 		left: 0;
 	}
 }
+#intro,
+#overview,
+#download,
+#download2,
+#feature {
+	padding-right: 6rem;
+	padding-left: 6rem;
+}
+#overview,
+#download,
+#download2 {
+	max-width: 1400px;
+	margin: 0 auto
+}
+
 .intro {
 	display: flex;
 	align-items: center;
@@ -176,8 +195,9 @@ $brk: 870px;
 		text-transform: uppercase;
 		font-weight: 800;
 		font-size: 10rem;
+		font-size: clamp(30px , calc(10vw + 1.2rem), 300px);
 		letter-spacing: -3px;
-		line-height: 10rem;
+		line-height: clamp(30px , calc(10vw + 1.2rem), 300px);
 		width: 8ch;
 		margin-top: 2rem;
 	}
@@ -187,24 +207,37 @@ $brk: 870px;
 		margin-top: 1rem;
 	}
 	&-img {
+		height: 30vw;
+		width: 23vw;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 	&::after {
 		content: '';
 		background-color: var(--white-font);
 		display: block;
-		width: 110%;
+		width: 110vw;
 		height: 8rem;
 		position: absolute;
 		bottom: 0rem;
 		left: -4rem;
 		transform: rotateZ(-6deg);
+		@media (min-width: 2100px) {
+			left: -50%;
+			transform: rotateZ(-6deg) translateX(35%);
+		}
 	}
 }
 .overview {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 5rem;
+	&#overview{
+		padding-bottom: 5rem;
+	}
 	@media (max-width: $brk) {
 		flex-direction: column;
 	}
@@ -218,12 +251,14 @@ $brk: 870px;
 		padding-right: 2rem;		
 	}
 	&-img {
+		margin: 0 6rem;
 		img {
 
 		}
 	}
 }
-#download {
+#download,
+#download2  {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -237,8 +272,7 @@ $brk: 870px;
 	border-radius: .5rem;
 	position: relative;
 	z-index: 5;
-	max-width: 1200px;
-	width: 70vw;
+	width: 100%;
 	@media (max-width: $brk) {
 		flex-direction: column;
 	}
@@ -265,13 +299,17 @@ $brk: 870px;
 		content: '';
 		background-color: var(--white-font);
 		display: block;
-		width: 110%;
+		width: 110vw;
 		height: 8rem;
 		position: absolute;
 		top: -4rem;
 		left: -4rem;
 		z-index: 0;
 		transform: rotateZ(3deg);
+		@media (min-width: 2100px) {
+			left: -50%;
+			transform: rotateZ(3deg) translateX(-35%);
+		}
 	}
 }
 .feature {
@@ -293,6 +331,8 @@ $brk: 870px;
 			justify-items: flex-start;
 			.feature-title {
 				text-align: left;
+				left: -1.5rem;
+				right: unset;
 			}
 			.feature-text {
 				grid-column: 1;
@@ -313,6 +353,9 @@ $brk: 870px;
 		font-weight: 800;
 		overflow: hidden;
 		text-align: right;
+		position: relative;
+		left: unset;
+		right: -1.5rem;
 	}
 	&-text {
 		grid-column: 2;
@@ -327,9 +370,13 @@ $brk: 870px;
 		grid-column: 1;
 		grid-row: 2;
 		position: relative;
-		top: -14rem;
-		right: -3rem;
+		top: -15rem;
+		height: 40vw;
+		width: 33vw;
 		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
 			transform: rotateZ(20deg);
 		}
 	}
@@ -393,7 +440,10 @@ $brk: 870px;
 		&-title {
 			color: var(--main-clr);
 			margin-bottom: .5rem;
-
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
 		}
 		&-hook {
 			display: -webkit-box;
