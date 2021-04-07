@@ -86,10 +86,10 @@ export default {
             this.content = data.content;
             this.date = new Date(data.date_created).toLocaleDateString('fr-FR', {day: 'numeric', month: 'long', year: 'numeric'});
             data.tags.forEach(element => {
-                this.tags.push(element.tags_id.name);
+                if (element.tags_id !== null) this.tags.push(element.tags_id.name);
             });
             data.sources.forEach(element => {
-                this.sources.push({ name: element.sources_id.name, link: element.sources_id.link });
+                if (element.sources_id !== null) this.sources.push({ name: element.sources_id.name, link: element.sources_id.link });
             });
             fetch(`https://data.app-tricycle.com/users/${data.user_created}`, {
                 method: 'GET'
