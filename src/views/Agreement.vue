@@ -204,6 +204,9 @@ export default {
   main {
 		margin: 0 auto;
 		max-width: 800px;
+    @media (max-width: 720px) {
+			padding: 0 1.5rem;	
+		}
     h1 {
       margin-top: 4rem;
       font-size: 3rem;

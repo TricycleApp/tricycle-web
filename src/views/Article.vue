@@ -98,7 +98,6 @@ export default {
             .then(res => {
                 this.author = res.data.first_name + ' ' + res.data.last_name;
             })
-            // console.log(this.sources);
         });
 	},
 };
@@ -115,6 +114,10 @@ export default {
     &-title {
         font-size: 3.18rem;
         margin-bottom: 2.5rem;
+        word-break: break-word;
+        @media (min-width: 720px) {
+            font-size: 2.5rem;
+        }
     }
     &-tags {
         display: flex;
