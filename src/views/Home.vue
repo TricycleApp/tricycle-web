@@ -24,7 +24,7 @@
 			</section>
 			<section id="download">
 				<div class="download">
-					<p class="download-text">Essayez la !<br />C'est gratuit 😊</p>
+					<p class="download-text">Essayez-la !<br />C'est gratuit 😊</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
 						<a href="#download" class="download-link disable"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
@@ -38,14 +38,14 @@
 					<div class="feature-img">
 						<img src="@/assets/phone-scan.png" alt="" class="left-phone"/>
 					</div>
-					<p class="feature-text">Le scan est le moyen simple et rapide de déterminer les emballages d'un produit en scannant son code barre pour savoir où les triés 📷</p>
+					<p class="feature-text">Le scan est le moyen simple et rapide de déterminer les emballages d'un produit en scannant son code barre pour savoir où les trier 📷</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Détails</h3>
 					<div class="feature-img">
 						<img src="@/assets/phone-product.png" alt="" class="right-phone"/>
 					</div>
-					<p class="feature-text">Visualiser les détails du produit, où et comment le trier.</p>
+					<p class="feature-text">Visualisez les détails du produit, où et comment le trier.</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Recherche</h3>
@@ -59,12 +59,12 @@
 					<div class="feature-img">
 						<img src="@/assets/phone-article.png" alt="" class="right-phone"/>
 					</div>
-					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent en avant les personnes qui font avancer l'écologie. 📚</p>
+					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent en avant les personnes qui faisant avancer l'écologie. 📚</p>
 				</div>
 			</section>
 			<section id="download2">
 				<div class="download">
-					<p class="download-text">L'appli vous tente ?<br />Téléchargez la !⚡</p>
+					<p class="download-text">L'appli vous tente ?<br />Téléchargez-la !⚡</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
 						<a href="#download2" class="download-link disable"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
