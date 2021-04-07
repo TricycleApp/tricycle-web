@@ -11,7 +11,7 @@
 export default {
 	name: "DarkSwitch",
     created(){
-        if (localStorage.getItem('dark') === true) document.documentElement.classList.add('dark');
+        if (localStorage.getItem('dark') === 'true') document.documentElement.classList.add('dark');
     },
     mounted() {
         document.querySelector('.toggle-theme').addEventListener('click', ()=> {
