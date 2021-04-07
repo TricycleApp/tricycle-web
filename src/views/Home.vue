@@ -43,21 +43,21 @@
 				<div class="feature-container">
 					<h3 class="feature-title">Détails</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" class="right-phone"/>
+						<img src="@/assets/phone-product.png" alt="" class="right-phone"/>
 					</div>
 					<p class="feature-text">Visualisé les détails du produit, où et comment le trier.</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Recherche</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" class="left-phone"/>
+						<img src="@/assets/phone-search.png" alt="" class="left-phone"/>
 					</div>
 					<p class="feature-text">Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter un produit sans le scanner. Recherchez un produit par catégorie, si vous n'avez pas son nom 🧐</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">News</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" class="right-phone"/>
+						<img src="@/assets/phone-article.png" alt="" class="right-phone"/>
 					</div>
 					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
 				</div>
@@ -118,16 +118,16 @@ export default {
 		};
 	},
 	mounted() {
-		gsap.to("#main-img", { 
-			scrollTrigger: {
-				trigger: "#main-img",
-				toggleActions: 'play complete reverse reverse',
-				start: "900px bottom",
-			},
-			rotateZ: 10,
-			ease: "power3.out",
-			duration: 1.6,
-		});
+		// gsap.to("#main-img", { 
+		// 	scrollTrigger: {
+		// 		trigger: "#main-img",
+		// 		toggleActions: 'play complete reverse reverse',
+		// 		start: "900px bottom",
+		// 	},
+		// 	rotateZ: 10,
+		// 	ease: "power3.out",
+		// 	duration: 1.6,
+		// });
 		let left = gsap.utils.toArray('.left-phone');
 		left.forEach((section) => {
 			gsap.from(section, { 
