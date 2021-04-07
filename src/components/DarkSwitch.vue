@@ -16,7 +16,7 @@ export default {
     mounted() {
         document.querySelector('.toggle-theme').addEventListener('click', ()=> {
             document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classlist.contains('dark')) localStorage.setItem('dark', true);
+            if (document.documentElement.classList.contains('dark')) localStorage.setItem('dark', true);
             else localStorage.setItem('dark', false);
         });
     }
