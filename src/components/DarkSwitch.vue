@@ -20,11 +20,10 @@ export default {
 
 <style lang="scss" scoped>
 .dark-toggle {
-    position: absolute;
-    right: 1.1rem;
-    top: 1.2rem;
     display: flex;
     align-items: center;
+    position: relative;
+    top: -0.5rem;
 }
 .toggle-theme {
     background-color: var(--main-clr);

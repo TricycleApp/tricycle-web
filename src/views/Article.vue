@@ -25,7 +25,7 @@
                                 <a href="https://twitter.com/TriCycle_app" title="Twitter"><img src="../assets/icons/twitter.svg" alt=""></a>
                             </li>
                             <li class="article-social-item">
-                                <a href="#" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
+                                <a href="https://www.instagram.com/tricycleapp/?hl=fr" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
                             </li>
                         </ul>
                     </div>
