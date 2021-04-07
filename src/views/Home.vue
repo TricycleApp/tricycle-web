@@ -16,7 +16,7 @@
 			<section id="overview" class="overview">
 				<div class="overview-infos">
 					<h2 class="overview-title">Ne vous prenez plus la tête pour trier.😉</h2>
-					<p class="overview-text">Tricycle App est une application permettant de vous aidez à trier vos déchets, en les scannant vous aurez accès aux informations du produit et la manière de le trier.</p>
+					<p class="overview-text">Tricycle App est une application permettant de vous aider à trier vos déchets, en les scannant vous aurez accès aux informations du produit et la manière de le trier.</p>
 				</div>
 				<div class="overview-img">
 					<img src="@/assets/sort-products.svg" alt="" />
@@ -38,14 +38,14 @@
 					<div class="feature-img">
 						<img src="@/assets/phone-scan.png" alt="" class="left-phone"/>
 					</div>
-					<p class="feature-text">Le scan est le moyen simple et rapide de les emballages d'un produit en scannant son code barre et savoir où les trié 📷</p>
+					<p class="feature-text">Le scan est le moyen simple et rapide de déterminer les emballages d'un produit en scannant son code barre pour savoir où les triés 📷</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Détails</h3>
 					<div class="feature-img">
 						<img src="@/assets/phone-product.png" alt="" class="right-phone"/>
 					</div>
-					<p class="feature-text">Visualisé les détails du produit, où et comment le trier.</p>
+					<p class="feature-text">Visualiser les détails du produit, où et comment le trier.</p>
 				</div>
 				<div class="feature-container">
 					<h3 class="feature-title">Recherche</h3>
@@ -59,12 +59,12 @@
 					<div class="feature-img">
 						<img src="@/assets/phone-article.png" alt="" class="right-phone"/>
 					</div>
-					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent avant les personnes qui font avancé l'écologie.</p>
+					<p class="feature-text">Consultez nos articles positifs sur l'environnement et l'innovation qui mettent en avant les personnes qui font avancer l'écologie. 📚</p>
 				</div>
 			</section>
 			<section id="download2">
 				<div class="download">
-					<p class="download-text">L'appli vous tente ?<br />Téléchargez le !⚡</p>
+					<p class="download-text">L'appli vous tente ?<br />Téléchargez la !⚡</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=dev.tricycle" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
 						<a href="" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
