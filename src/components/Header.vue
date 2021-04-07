@@ -34,6 +34,7 @@ header {
 	@media (max-width: $brk) {
 		flex-direction: column;
 		align-items: center;
+		padding: 1rem;
 	}
 }
 .header { 
@@ -42,6 +43,9 @@ header {
 		font-size: 1.4rem;
 		font-weight: bold;
 		color: var(--white-font);
+		@media (max-width: 720px) {
+			padding: 1rem;
+		}
 		.logo {
 			height: 4rem;
 			object-fit: contain;

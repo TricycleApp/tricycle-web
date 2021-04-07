@@ -36,7 +36,7 @@
 				<div class="feature-container">
 					<h3 class="feature-title">Scan</h3>
 					<div class="feature-img">
-						<img src="@/assets/phone.png" alt="" class="left-phone"/>
+						<img src="@/assets/phone-scan.png" alt="" class="left-phone"/>
 					</div>
 					<p class="feature-text">Le scan est le moyen simple et rapide de les emballages d'un produit en scannant son code barre et savoir où les trié 📷</p>
 				</div>
@@ -454,7 +454,7 @@ $brk: 870px;
 		max-width: 35ch;
 		@media (max-width: $brk) {
 			position: relative;
-			top: -6rem;
+			top: -10rem;
 		}
 	}
 	&-img {
@@ -468,8 +468,10 @@ $brk: 870px;
 		height: 40vw;
 		width: 33vw;
 		@media (max-width: $brk) {
-			top: -5rem;
+			top: -8rem;
 			right: -13rem;
+            height: 55vw;
+            width: 45vw;
 		}
 		img {
 			width: 100%;
