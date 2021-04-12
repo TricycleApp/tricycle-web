@@ -100,6 +100,7 @@
 			<h2>Portabilit&eacute; des donn&eacute;es</h2>
 			<p>L&#39;&Eacute;diteur s&#39;engage &agrave; vous offrir la possibilit&eacute; de vous faire restituer l&#39;ensemble des donn&eacute;es vous concernant sur simple demande. L&#39;Utilisateur se voit ainsi garantir une meilleure ma&icirc;trise de ses donn&eacute;es, et garde la possibilit&eacute; de les r&eacute;utiliser. Ces donn&eacute;es devront &ecirc;tre fournies dans un format ouvert et ais&eacute;ment r&eacute;utilisable.</p>
 		</main>
+		<Contact />
 		<Footer />
 	</div>
 </template>
@@ -107,12 +108,14 @@
 <script>
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 export default {
 	name: "Agreement",
 	components: {
 		Header,
 		Footer,
+		Contact
 	},
 };
 </script>
