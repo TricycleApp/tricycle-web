@@ -27,7 +27,7 @@
 					<p class="download-text">Essayez-la !<br />C'est gratuit 😊</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=com.tricycle.app" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
-						<a href="#download" class="download-link disable"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
+						<a href="https://apps.apple.com/us/app/tricycleapp/id1562482886#?platform=iphone" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
 					</div>
 				</div>
 			</section>
@@ -67,7 +67,7 @@
 					<p class="download-text">L'appli vous tente ?<br />Téléchargez-la !⚡</p>
 					<div class="download-button">
 						<a href="https://play.google.com/store/apps/details?id=com.tricycle.app" class="download-link"><img src="@/assets/playstore.svg" alt="Google Play store"/></a>
-						<a href="#download2" class="download-link disable"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
+						<a href="https://apps.apple.com/us/app/tricycleapp/id1562482886#?platform=iphone" class="download-link"><img src="@/assets/appstore.svg" alt="Apple App Store"/></a>
 					</div>
 				</div>
 			</section>
