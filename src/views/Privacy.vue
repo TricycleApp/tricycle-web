@@ -131,6 +131,9 @@ export default {
 		h1 {
 			margin-top: 4rem;
 			font-size: 3rem;
+			@media (max-width: 740px) {
+				font-size: 2.4rem;
+			}
 		}
 		h2 {
 			margin-top: 2.5rem;

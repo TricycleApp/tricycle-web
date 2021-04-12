@@ -24,7 +24,7 @@ export default {
         font-weight: bold;
         font-size: 1.2rem;
 		@media (max-width: 720px) {
-			padding: 0 1.5rem;	
+			padding: 2rem 1.5rem;	
 		}
     }
 }
