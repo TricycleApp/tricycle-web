@@ -138,7 +138,7 @@
       <p>Pour assurer la sécurité et la confidentialité des Données Personnelles et des Données Personnelles de Santé, https://app-tricycle.com utilise des réseaux protégés par des dispositifs standards tels que par pare-feu, la pseudonymisation, l’encryption et mot de passe.</p>
 
       
-      <p>Lors du traitement des Données Personnelles, https://app-tricycle.comprend toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée, accès non autorisé, divulgation, altération ou destruction.</p>
+      <p>Lors du traitement des Données Personnelles, https://app-tricycle.com prend toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée, accès non autorisé, divulgation, altération ou destruction.</p>
 
       
       <h2>9. Liens hypertextes « cookies » et balises (“tags”) internet</h2>
