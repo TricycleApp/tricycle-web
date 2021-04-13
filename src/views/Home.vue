@@ -428,7 +428,7 @@ $brk: 870px;
 			.feature-img {
 				grid-column: 2;
 				img {
-					transform: rotateZ(-20deg);
+					transform: rotateZ(-10deg);
 				}
 			}
 		}
@@ -480,7 +480,7 @@ $brk: 870px;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
-			transform: rotateZ(20deg);
+			transform: rotateZ(10deg);
 		}
 	}
 }
