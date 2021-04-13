@@ -1,6 +1,5 @@
 <template>
 	<div class="presentation">
-		<Header />
 		<main>
 			<section id="intro" class="intro">
 				<div class="intro-container">
@@ -91,14 +90,10 @@
 				</ul>
 			</section>
 		</main>
-		<Footer />
 	</div>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -108,10 +103,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
 	name: "Home",
-	components: {
-		Header,
-		Footer,
-	},
 	data() {
 		return {
 			articles: [],

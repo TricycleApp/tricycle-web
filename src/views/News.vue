@@ -1,6 +1,5 @@
 <template>
 	<section class="news">
-		<Header />
 		<main class="news-container">
 			<h1 class="news-container-title">Articles</h1>
 			<ul class="news-list">
@@ -19,19 +18,11 @@
 				</li>
 			</ul>
 		</main>
-		<Footer />
 	</section>
 </template>
 
 <script>
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 export default {
-	components: {
-		Header,
-		Footer,
-	},
 	data() {
 		return {
 			articles: [],

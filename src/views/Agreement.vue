@@ -1,6 +1,5 @@
 <template>
   <div class="agreement">
-    <Header/>
     <main>
       <h1>Conditions d'utilisations</h1>
       <h2>Définitions</h2>
@@ -182,20 +181,12 @@
       <p>10. Droit applicable et attribution de juridiction.
       Tout litige en relation avec l’utilisation du site https://app-tricycle.com est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Nantes</p>
     </main>
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
 export default {
-  name:'Agreement',
-  components: {
-    Header, 
-    Footer
-  }
+  name:'Agreement'
 }
 </script>
 

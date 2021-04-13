@@ -1,50 +1,7 @@
 <template>
     <div class="article-view">
         <main class="article">
-            <div class="article-container">
-                <h1 class="article-title">{{ title }}</h1>
-                <ul class="article-tags">
-                    <li class="article-tags-item" v-for="tag in tags" :key="tag.id">{{ tag }}</li>
-                </ul>
-                <div class="article-infos">
-                    <div class="article-date">{{ date }}</div>
-                    <div class="article-author">
-                    <span class="article-author-label">Écrit par</span>
-                    <span class="article-author-name">{{ author }}</span>
-                </div>
-                </div>
-                <div class="article-thumbnail">
-                    <img :src="'https://data.app-tricycle.com/assets/' + thumbnail" alt="" />
-                </div>
-                <div class="article-social">
-                    <div class="article-social-container">
-                        <h2 class="article-social-label">Visitez nos réseaux 😊</h2>
-                        <ul class="article-social-list">
-                            <li class="article-social-item">
-                                <a href="https://twitter.com/TriCycle_app" title="Twitter"><img src="../assets/icons/twitter.svg" alt=""></a>
-                            </li>
-                            <li class="article-social-item">
-                                <a href="https://www.instagram.com/tricycleapp/?hl=fr" title="Instagram"><img src="../assets/icons/instagram.svg" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="article-accroche" v-html="accroche"></div>
-                <div class="article-content" v-html="content"></div>
-                <div class="article-sources">
-                    <p class="article-sources-label">Sources :</p>
-                    <ul class="article-sources-list">
-                        <li class="article-sources-item" v-for="source in sources" :key="source.id">
-                            <a :href="source.link">{{ source.name }}</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="article-all">
-                    <button class="btn btn-second">
-                        <router-link to="/news" class="article-see-all">Voir tout les articles</router-link>
-                    </button>
-                </div>
-            </div>
+
         </main>
     </div>
 </template>
