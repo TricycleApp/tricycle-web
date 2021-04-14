@@ -225,6 +225,9 @@ textarea {
     border-radius: .6rem;
     margin-bottom: 0.6rem;
 }
+.callout:empty {
+    transform: scaleY(0);
+}
 .callout.success {
     background-color: var(--input-valid);
 }
