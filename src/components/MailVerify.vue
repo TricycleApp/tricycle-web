@@ -5,7 +5,7 @@
             <p class="forgot-text">Pour vérifier que c'est bien vous, renseignez l'adresse email dans le champ ci-dessous 👇</p>
             <div class="callout error" id="mail-error"></div>
             <div class="input-container input-mail">
-                <input type="email" id="mail-confirm" placeholder="jacques.martin@gmail.com">
+                <input type="email" v-model="email" id="mail-confirm" placeholder="jacques.martin@gmail.com">
             </div>
             <button class="btn forgot-button" @click="onClk">Envoyer le mail</button>
         </div>
@@ -14,14 +14,19 @@
 <script setup>
 export default {
     name: "MailVerif",
+    data() {
+        return {
+            email: null
+        }
+    },
     methods: {
         onClk() {
             fetch(`https://api.app-tricycle.com/user/password/reset`, {
+                 headers: {'Content-Type': 'application/json' },
                  method: 'POST',
-                 body: {
-                     email: document.querySelector('#mail-confirm').value
-                 },
-                 redirect: 'follow'
+                 body: JSON.stringify({
+                     email: this.email
+                 })
             })
             .then(res => {
                 if (res.status === 400) throw 'wrong-mail'
@@ -35,7 +40,6 @@ export default {
                 if (err === 'wrong-mail') document.querySelector('#mail-error').innerHTML = "L'adresse mail n'existe pas"
                 else console.log(err);
             })
-            this.$emit('clicked', true) //TODO: disable for production
         }
     }
 }

@@ -38,10 +38,10 @@ export default {
             }
         },
         onCode(value) {
-            if (value !== false) {
+            if (value.code) {
                 this.code = false;
                 this.pass = true;
-                this.codeNumber = value;
+                this.codeNumber = value.code;
             }
         },
         onPass(value) {
