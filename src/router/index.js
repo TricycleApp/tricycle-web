@@ -26,7 +26,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
   },
   {
-    path: '/forgot',
+    path: '/forgot-password',
     name: 'Forgot',
     component: () => import(/* webpackChunkName: "about" */ '../views/Forgot.vue')
   },

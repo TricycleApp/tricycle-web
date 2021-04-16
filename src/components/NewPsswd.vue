@@ -28,15 +28,18 @@ export default {
                      password: this.password
                  })
             })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 400) throw 'error-password'
+                return res.json()
+            })
             .then(data => {
                 console.log(data)
                 this.$emit('clicked', true)
             })
             .catch(err => {
-                console.log(err);
+                if (err === 'error-password')  document.querySelector('#mail-error').innerHTML = "Un des caractères du mot de passe est invalide, veuillez rentrer un mot passe contenant(chiffres, lettres)"
+                else document.querySelector('#mail-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
             })
-            this.$emit('clicked', true) //TODO: disable for production
         }
     }
 }

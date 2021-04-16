@@ -28,15 +28,17 @@ export default {
             })
             .then(res => {
                 if (res.status === 400) throw 'wrong-code'
+                if (res.status === 404) throw 'expired-code'
                 return res.json()
             })
             .then(data => {
-                console.log(data)
+                console.log(data);
                 this.$emit('clicked', {code: this.code})
             })
             .catch(err => {
                 if (err === 'wrong-code') document.querySelector('#mail-error').innerHTML = "Le code est mauvais, veuillez réessayer"
-                else console.log(err);
+                if (err === 'expired-code') document.querySelector('#mail-error').innerHTML = "Le code à expiré, veuillez recommencer la récupération."
+                else document.querySelector('#mail-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
             })
         }
     }
