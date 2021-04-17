@@ -40,21 +40,21 @@
 					<p class="feature-text">Le scan est le moyen simple et rapide de déterminer les emballages d'un produit en scannant son code barre pour savoir où les trier 📷</p>
 				</div>
 				<div class="feature-container">
-					<h3 class="feature-title">Détails</h3>
+					<h3 class="feature-title right-title">Détails</h3>
 					<div class="feature-img">
 						<img src="@/assets/phone-product.png" alt="" class="right-phone"/>
 					</div>
 					<p class="feature-text">Visualisez les détails du produit, où et comment le trier.</p>
 				</div>
 				<div class="feature-container">
-					<h3 class="feature-title">Recherche</h3>
+					<h3 class="feature-title left-title">Recherche</h3>
 					<div class="feature-img">
 						<img src="@/assets/phone-search.png" alt="" class="left-phone"/>
 					</div>
 					<p class="feature-text">Vous pouvez également utiliser la fonction "Recherche" pour savoir où jeter un produit sans le scanner. Recherchez un produit par catégorie, si vous n'avez pas son nom 🧐</p>
 				</div>
 				<div class="feature-container">
-					<h3 class="feature-title">News</h3>
+					<h3 class="feature-title right-title">News</h3>
 					<div class="feature-img">
 						<img src="@/assets/phone-article.png" alt="" class="right-phone"/>
 					</div>
@@ -109,27 +109,52 @@ export default {
 		};
 	},
 	mounted() {
-		// gsap.to("#main-img", { 
-		// 	scrollTrigger: {
-		// 		trigger: "#main-img",
-		// 		toggleActions: 'play complete reverse reverse',
-		// 		start: "900px bottom",
-		// 	},
-		// 	rotateZ: 10,
-		// 	ease: "power3.out",
-		// 	duration: 1.6,
-		// });
+		gsap.from(".intro-container", { 
+			opacity: 0,
+			x: 10,
+			ease: "power3.out",
+			duration: 1.6,
+		});
+		let leftTitle = gsap.utils.toArray('.left-title');
+		leftTitle.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete paused stop',
+					start: "300px bottom",
+				},
+				x: 20,
+				ease: "power3.out",
+				opacity: 0,
+				duration: 1,
+			});
+		})
+		let rightTitle = gsap.utils.toArray('.right-title');
+		rightTitle.forEach((section) => {
+			gsap.from(section, { 
+				scrollTrigger: {
+					trigger: section,
+					toggleActions: 'play complete paused stop',
+					start: "300px bottom",
+				},
+				x: 20,
+				ease: "power3.out",
+				opacity: 0,
+				duration: 1,
+			});
+		})
 		let left = gsap.utils.toArray('.left-phone');
 		left.forEach((section) => {
 			gsap.from(section, { 
 				scrollTrigger: {
 					trigger: section,
-					toggleActions: 'play complete reverse reverse',
-					start: "600px bottom",
+					toggleActions: 'play complete paused stop',
+					start: "300px bottom",
 				},
-				rotateZ: 10,
+				rotateZ: 20,
 				ease: "power3.out",
-				duration: 3,
+				opacity: 0,
+				duration: 1,
 			});
 		})
 		let right = gsap.utils.toArray('.right-phone');
@@ -137,12 +162,13 @@ export default {
 			gsap.from(section, { 
 				scrollTrigger: {
 					trigger: section,
-					toggleActions: 'play complete reverse reverse',
-					start: "600px bottom",
+					toggleActions: 'play complete play play',
+					start: "300px bottom",
 				},
-				rotateZ: -10,
+				rotateZ: -20,
 				ease: "power3.out",
-				duration: 3,
+				opacity: 0,
+				duration: 1,
 			});
 		})
 	},
