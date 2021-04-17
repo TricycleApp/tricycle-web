@@ -6,6 +6,7 @@
             <div class="input-container input-number">
                 <input type="number" v-model="code" id="code-confirm" placeholder="0000">
             </div>
+            <p class="forgot-text">⚠ Attention le mail peut être dans vos spams</p>
             <button class="btn forgot-button" @click="onClk">Changer mon mot de passe</button>
         </div>
 </template>
