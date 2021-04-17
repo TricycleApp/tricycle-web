@@ -3,7 +3,9 @@
             <h1 class="forgot-title">Récupération de mot de passe</h1>
             <p class="forgot-text">Vous avez rencontrée un problème avec votre mot de passe ? Pas de problème on a une solution 😉</p>
             <p class="forgot-text">Pour vérifier que c'est bien vous, renseignez l'adresse email dans le champ ci-dessous 👇</p>
-            <div class="callout error" id="mail-error"></div>
+            <div class="callout-container">
+                <div class="callout error" id="mail-error"></div>
+            </div>
             <div class="input-container input-mail">
                 <input type="email" v-model="email" id="mail-confirm" placeholder="jacques.martin@gmail.com">
             </div>

@@ -38,7 +38,9 @@ export default {
             }
         },
         onCode(value) {
-            if (value.code) {
+            console.log('code value');
+            console.log(value);
+            if (value.status === 200) {
                 this.code = false;
                 this.pass = true;
                 this.codeNumber = value.code;

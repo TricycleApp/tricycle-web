@@ -29,9 +29,10 @@ export default {
             })
             .then(res => res.json().then(data => ({ status: res.status, body: data })))
             .then(data => {
+                console.log(data);
                 if (data.status === 400) throw { status: 400, message: data.body.message };
                 else if (data.status === 404) throw {status: 404, message: data.body.message };
-                else this.$emit('clicked', data.body.message);
+                else this.$emit('clicked', { status: data.status, code: this.code, message: data.body.message });
             })
             .catch(err => {
                 if (err.status === 400 || err.status === 404) document.querySelector('#code-error').innerHTML = err.message;

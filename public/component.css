@@ -216,6 +216,19 @@ textarea {
     }
 }
 
+
+/* callout */
+.callout-container {
+    height: 60px;
+    margin-top: 1rem;
+    position: relative;
+}
+.callout-container .callout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 .callout {
     padding: 1rem;
     color: var(--white-font);
