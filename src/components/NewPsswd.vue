@@ -2,6 +2,7 @@
         <div class="forgot-container">
             <h1 class="forgot-title">Création du nouveau mot de passe</h1>
             <p class="forgot-text">Vous pouvez maintenant changer votre mot de passe 😎</p>
+            <div class="callout error" id="pass-error"></div>
             <div class="input-container input-password">
                 <input type="password" v-model="password" id="new-pass" placeholder="********">
             </div>
@@ -28,17 +29,14 @@ export default {
                      password: this.password
                  })
             })
-            .then(res => {
-                if (res.status === 400) throw 'error-password'
-                return res.json()
-            })
+            .then(res => res.json().then(data => ({ status: res.status, body: data })))
             .then(data => {
-                console.log(data)
-                this.$emit('clicked', true)
+                if (data.status === 400) throw { status: 400, message: data.body.message };
+                else this.$emit('clicked', data.body.message);
             })
             .catch(err => {
-                if (err === 'error-password')  document.querySelector('#mail-error').innerHTML = "Un des caractères du mot de passe est invalide, veuillez rentrer un mot passe contenant(chiffres, lettres)"
-                else document.querySelector('#mail-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
+                if (err.status === 400) document.querySelector('#pass-error').innerHTML = err.message;
+                else document.querySelector('#pass-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
             })
         }
     }

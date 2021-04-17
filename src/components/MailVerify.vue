@@ -28,18 +28,14 @@ export default {
                      email: this.email
                  })
             })
-            .then(res => {
-                if (res.status === 400) throw 'wrong-mail'
-                if (res.status === 404) throw 'unknown-mail'
-                return res.json()
-            })
+            .then(res => res.json().then(data => ({ status: res.status, body: data })))
             .then(data => {
-                this.$emit('clicked', true);
-                return data;
+                if (data.status === 400) throw { status: 400, message: data.body.message };
+                else if (data.status === 404) throw {status: 404, message: data.body.message };
+                else this.$emit('clicked', data.body.message);
             })
             .catch(err => {
-                if (err === 'wrong-mail') document.querySelector('#mail-error').innerHTML = "L'adresse mail est mal écrite"
-                if (err === 'unknown-mail') document.querySelector('#mail-error').innerHTML = "Le compte n'existe pas"
+                if (err.status === 400 || err.status === 404) document.querySelector('#mail-error').innerHTML = err.message;
                 else document.querySelector('#mail-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
             })
         }

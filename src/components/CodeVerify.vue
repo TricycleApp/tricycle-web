@@ -2,6 +2,7 @@
         <div class="forgot-container">
             <h1 class="forgot-title">Récupération de mot de passe</h1>
             <p class="forgot-text">Entrez le code reçu par mail ici ! 👇</p>
+            <div class="callout error" id="code-error"></div>
             <div class="input-container input-number">
                 <input type="number" v-model="code" id="code-confirm" placeholder="0000">
             </div>
@@ -26,19 +27,15 @@ export default {
                      code: this.code
                  })
             })
-            .then(res => {
-                if (res.status === 400) throw 'wrong-code'
-                if (res.status === 404) throw 'expired-code'
-                return res.json()
-            })
+            .then(res => res.json().then(data => ({ status: res.status, body: data })))
             .then(data => {
-                console.log(data);
-                this.$emit('clicked', {code: this.code})
+                if (data.status === 400) throw { status: 400, message: data.body.message };
+                else if (data.status === 404) throw {status: 404, message: data.body.message };
+                else this.$emit('clicked', data.body.message);
             })
             .catch(err => {
-                if (err === 'wrong-code') document.querySelector('#mail-error').innerHTML = "Le code est mauvais, veuillez réessayer"
-                if (err === 'expired-code') document.querySelector('#mail-error').innerHTML = "Le code à expiré, veuillez recommencer la récupération."
-                else document.querySelector('#mail-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
+                if (err.status === 400 || err.status === 404) document.querySelector('#code-error').innerHTML = err.message;
+                else document.querySelector('#code-error').innerHTML = "Une erreur est survenue, veuillez réesayer plus tard."
             })
         }
     }
