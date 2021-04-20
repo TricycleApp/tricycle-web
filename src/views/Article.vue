@@ -89,6 +89,12 @@ export default {
             .then(res => {
                 this.author = res.data.first_name + ' ' + res.data.last_name;
             })
+            .then(()=>{
+                document.querySelectorAll('.article-content h2').forEach((element)=> {
+                    element.innerHTML = `<span>${element.textContent}</span>`
+                    console.log(element);
+                })
+            })
         });
 	},
 };
@@ -174,8 +180,10 @@ export default {
     &-content {
         h2 {
             margin-top: 2.5rem;
-            display: inline-block;
-            background: linear-gradient(0deg, var(--main-clr) 0%, var(--main-clr) 49%, rgba(110,81,190,0) 50%);
+            display: block;
+            span {
+                background: linear-gradient(0deg, var(--main-clr) 0%, var(--main-clr) 49%, rgba(110,81,190,0) 50%);
+            }
         }
         p {
             margin-top: 1.875rem;
@@ -334,10 +342,9 @@ export default {
 }
 
 .dark .article {
-
     &-accroche,
     &-content {
-        h2 {
+        h2 span{
             background: linear-gradient(0deg, rgba(154, 199, 56, 0.6) 0%, rgba(154, 199, 56, 0.6) 49%, rgba(110,81,190,0) 50%);
         }
     }
