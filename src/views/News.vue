@@ -36,7 +36,7 @@ export default {
 			.then((res) => {
 				this.articles = res.data;
 			});
-	},
+	}
 };
 </script>
 

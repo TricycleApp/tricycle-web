@@ -95,6 +95,9 @@ export default {
 </script>
 
 <style lang="scss">
+.scroll-no-smooth {
+    scroll-behavior: auto;
+}
 .article {
     margin-top: 6rem;
     padding: 0 22px;
