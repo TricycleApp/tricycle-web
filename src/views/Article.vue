@@ -64,6 +64,15 @@ export default {
 			sources: [],
 		};
 	},
+    metaInfo() {
+        return {
+            title: this.title,
+            meta: [
+                { name: 'description', content: this.accroche },
+                { property: 'og:image', content: this.thumbnail }    
+            ]
+        }
+    },
 	mounted() {
 		fetch(`https://data.app-tricycle.com/items/articles/${this.$route.params.id}?fields=title,thumbnail,accroche,content,date_created,date_updated,tags.tags_id.name,sources.sources_id.*,user_created`, {
 			method: "GET",
