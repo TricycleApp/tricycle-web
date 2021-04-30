@@ -108,6 +108,15 @@ export default {
 			articles: [],
 		};
 	},
+	metaInfo() {
+        return {
+            title: 'Tricycle App - Scannez et Recyclez',
+            meta: [
+                { name: 'description', content: 'TriCycle est une nouvelle application qui vous permet de scanner différents types de produits, et d\'obtenir une information claire sur la manière de le recycler.' },
+                { property: 'og:image', content:'/favicon.png' }    
+            ]
+        }
+    },
 	mounted() {
 		gsap.from(".intro-container", { 
 			opacity: 0,
